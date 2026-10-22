@@ -1,0 +1,1001 @@
+,student_id,gender,study_time_hours,attendance_percent,sleep_hours,parental_education,internet_access,extracurricular_activities,part_time_job,previous_grade,final_exam_score,final_grade
+0,1,Male,4.0,98.0,6.5,Bachelors,Yes,Yes,No,76.9,100.0,A
+1,2,Female,6.3,100.0,5.7,High School,Yes,Yes,Yes,75.5,100.0,A
+2,3,Male,4.9,85.3,7.9,Bachelors,Yes,No,Yes,88.5,97.3,A
+3,4,Male,2.6,77.5,8.0,MissingInfo,Yes,Yes,No,85.1,83.8,B
+4,5,Male,2.2,89.6,4.6,Bachelors,Yes,No,Yes,61.8,68.3,D
+5,6,Female,4.2,78.2,5.7,High School,Yes,No,No,79.8,81.6,B
+6,7,Male,1.5,100.0,5.0,High School,Yes,Yes,Yes,58.6,69.6,D
+7,8,Male,6.2,86.4,6.0,High School,Yes,Yes,No,78.4,88.0,B
+8,9,Male,5.3,81.3,6.7,Bachelors,Yes,No,No,63.8,84.4,B
+9,10,Female,2.8,86.8,5.1,Bachelors,Yes,Yes,No,57.7,74.3,C
+10,11,Male,0.9,71.5,5.7,High School,Yes,No,Yes,73.4,68.9,D
+11,12,Male,5.5,75.3,5.6,MissingInfo,Yes,Yes,No,37.9,76.7,C
+12,13,Male,3.3,97.0,7.0,Masters,Yes,Yes,Yes,49.0,82.6,B
+13,14,Male,5.4,78.4,6.9,Bachelors,No,No,No,67.9,93.3,A
+14,15,Female,1.1,74.5,5.9,Masters,Yes,Yes,Yes,71.0,73.9,C
+15,16,Male,2.6,90.4,7.0,High School,Yes,Yes,No,65.6,84.8,B
+16,17,Female,3.5,96.9,6.1,Bachelors,Yes,Yes,No,51.0,81.5,B
+17,18,Female,3.6,92.2,6.5,Bachelors,Yes,Yes,Yes,60.2,75.5,C
+18,19,Female,2.8,95.0,8.8,Masters,No,Yes,No,74.7,89.7,B
+19,20,Male,4.4,77.4,8.4,Masters,No,No,Yes,77.0,92.8,A
+20,21,Female,1.9,70.8,5.2,High School,Yes,Yes,No,69.8,73.5,C
+21,22,Male,3.3,100.0,7.8,MissingInfo,Yes,Yes,No,83.9,100.0,A
+22,23,Female,3.7,81.8,7.8,High School,No,No,No,74.8,73.4,C
+23,24,Female,4.3,82.5,5.4,PhD,No,Yes,No,61.0,71.2,C
+24,25,Female,4.6,98.3,7.8,MissingInfo,Yes,Yes,Yes,66.6,97.2,A
+25,26,Female,1.8,90.6,8.6,High School,Yes,No,No,53.2,76.0,C
+26,27,Female,1.2,89.6,5.5,Masters,Yes,No,Yes,68.7,78.7,C
+27,28,Female,5.4,100.0,5.7,High School,No,No,No,83.3,97.4,A
+28,29,Female,4.0,78.6,8.0,Bachelors,Yes,No,No,78.2,84.2,B
+29,30,Female,2.4,94.3,7.1,Bachelors,Yes,Yes,No,86.8,89.8,B
+30,31,Male,5.8,85.6,7.5,Bachelors,Yes,No,Yes,66.4,82.4,B
+31,32,Male,3.7,87.7,7.2,MissingInfo,Yes,Yes,No,86.2,87.7,B
+32,33,Female,5.3,100.0,7.3,Masters,Yes,Yes,No,67.7,100.0,A
+33,34,Female,3.6,90.1,5.2,Bachelors,No,Yes,No,87.7,93.3,A
+34,35,Female,6.6,90.4,8.1,Masters,Yes,Yes,Yes,69.7,100.0,A
+35,36,Male,6.1,95.7,8.2,MissingInfo,Yes,Yes,Yes,78.5,92.9,A
+36,37,Female,3.1,81.4,6.5,High School,Yes,No,Yes,87.7,83.2,B
+37,38,Male,5.0,76.6,6.7,MissingInfo,Yes,Yes,No,67.7,81.1,B
+38,39,Male,4.5,74.6,5.0,High School,Yes,Yes,Yes,72.6,89.5,B
+39,40,Male,5.6,65.3,7.4,Masters,Yes,Yes,No,85.5,91.6,A
+40,41,Male,2.1,100.0,7.5,High School,Yes,Yes,Yes,68.4,75.3,C
+41,42,Male,4.5,74.0,6.7,High School,Yes,No,No,54.1,79.0,C
+42,43,Female,5.1,82.8,8.1,Bachelors,Yes,Yes,No,95.7,100.0,A
+43,44,Female,0.9,82.2,6.4,Bachelors,Yes,Yes,No,64.4,79.2,C
+44,45,Female,1.7,88.1,7.5,Bachelors,No,Yes,No,71.9,70.8,C
+45,46,Female,0.5,93.2,5.6,High School,No,No,Yes,83.9,61.8,D
+46,47,Female,3.1,93.6,6.8,Bachelors,Yes,Yes,Yes,62.7,68.0,D
+47,48,Male,4.6,79.2,6.6,MissingInfo,Yes,Yes,Yes,57.9,80.3,B
+48,49,Female,5.8,83.3,7.1,Bachelors,No,Yes,No,73.0,88.6,B
+49,50,Female,3.6,87.8,6.4,High School,Yes,Yes,No,48.5,69.4,D
+50,51,Male,5.9,82.5,6.6,Bachelors,Yes,Yes,No,66.5,100.0,A
+51,52,Female,1.4,100.0,7.8,High School,No,No,No,72.9,81.8,B
+52,53,Male,0.9,89.9,6.3,Masters,Yes,No,No,66.8,72.6,C
+53,54,Female,3.4,92.3,4.9,Masters,Yes,No,No,51.5,85.3,B
+54,55,Male,4.1,91.6,8.9,Bachelors,No,Yes,No,89.1,99.8,A
+55,56,Female,3.5,96.7,8.5,Bachelors,Yes,Yes,Yes,71.2,84.3,B
+56,57,Female,0.5,86.8,5.2,Masters,Yes,Yes,No,87.2,71.5,C
+57,58,Male,3.4,72.0,7.6,Bachelors,Yes,No,No,66.9,84.3,B
+58,59,Male,1.5,89.0,6.2,Masters,Yes,No,No,59.4,74.5,C
+59,60,Male,4.5,78.5,7.1,Bachelors,Yes,No,No,73.2,89.5,B
+60,61,Male,4.0,79.7,7.2,Masters,Yes,Yes,No,67.4,80.4,B
+61,62,Male,2.1,90.9,6.5,Bachelors,No,Yes,Yes,55.9,71.1,C
+62,63,Male,2.7,97.4,5.9,Bachelors,Yes,Yes,No,87.6,87.8,B
+63,64,Male,1.9,85.2,6.0,MissingInfo,Yes,No,No,62.5,73.0,C
+64,65,Male,3.4,88.1,5.7,Bachelors,Yes,No,Yes,47.9,80.8,B
+65,66,Female,4.9,100.0,5.8,Bachelors,Yes,No,No,85.9,97.4,A
+66,67,Female,2.0,87.4,6.7,High School,Yes,Yes,No,63.9,67.8,D
+67,68,Male,4.3,100.0,5.9,Bachelors,No,Yes,No,62.7,79.2,C
+68,69,Female,2.7,90.7,7.6,Bachelors,No,No,Yes,48.8,73.5,C
+69,70,Female,2.3,67.4,8.6,High School,Yes,No,No,90.9,85.1,B
+70,71,Female,3.3,92.5,6.1,High School,Yes,Yes,No,54.5,79.6,C
+71,72,Female,1.9,88.8,7.1,Bachelors,Yes,Yes,No,70.7,77.4,C
+72,73,Male,2.7,97.9,7.4,Masters,Yes,Yes,No,81.0,94.6,A
+73,74,Female,1.7,91.7,7.4,Bachelors,Yes,Yes,No,75.1,77.6,C
+74,75,Male,6.4,83.6,6.9,High School,Yes,Yes,No,69.3,99.9,A
+75,76,Female,3.6,72.8,7.7,Masters,No,No,No,49.6,64.4,D
+76,77,Female,2.5,82.9,7.4,High School,Yes,Yes,No,60.3,71.9,C
+77,78,Female,3.8,76.5,5.3,Bachelors,Yes,Yes,No,72.3,79.3,C
+78,79,Male,3.3,79.2,7.8,High School,Yes,Yes,Yes,60.6,74.9,C
+79,80,Female,3.2,90.9,7.9,High School,Yes,No,No,72.4,87.4,B
+80,81,Male,4.4,100.0,5.9,High School,Yes,No,No,78.2,97.6,A
+81,82,Female,4.6,88.9,6.8,Bachelors,Yes,Yes,No,81.6,74.5,C
+82,83,Male,2.7,73.0,7.6,High School,Yes,No,Yes,55.3,64.1,D
+83,84,Female,2.6,89.4,6.5,Bachelors,Yes,No,No,96.4,90.0,A
+84,85,Male,3.1,97.0,8.1,Bachelors,Yes,Yes,Yes,79.2,99.3,A
+85,86,Male,0.5,78.9,9.6,Bachelors,Yes,Yes,Yes,70.0,63.9,D
+86,87,Female,1.2,83.7,5.9,Bachelors,Yes,No,No,83.1,79.0,C
+87,88,Male,5.6,85.1,5.1,Masters,Yes,No,No,98.4,100.0,A
+88,89,Female,6.0,77.2,7.2,High School,Yes,No,No,52.7,78.9,C
+89,90,Female,3.1,91.5,7.7,Bachelors,Yes,No,Yes,67.3,84.5,B
+90,91,Female,4.4,83.8,6.5,High School,Yes,No,No,41.5,71.7,C
+91,92,Female,4.0,89.2,8.5,High School,Yes,Yes,Yes,72.3,86.3,B
+92,93,Female,8.1,76.1,5.2,Bachelors,Yes,Yes,No,74.4,98.3,A
+93,94,Female,5.2,80.6,7.6,Bachelors,Yes,Yes,No,69.5,88.1,B
+94,95,Female,3.3,92.2,6.1,PhD,Yes,Yes,No,62.1,99.6,A
+95,96,Female,2.1,81.3,8.9,Bachelors,Yes,No,No,45.4,74.8,C
+96,97,Female,1.1,100.0,9.2,MissingInfo,Yes,No,Yes,74.5,87.4,B
+97,98,Female,3.8,81.0,5.9,High School,No,No,No,87.5,88.5,B
+98,99,Female,2.4,87.2,6.1,High School,Yes,Yes,Yes,62.9,65.2,D
+99,100,Male,1.4,94.3,7.8,High School,No,No,No,75.3,79.2,C
+100,101,Male,2.5,70.8,6.3,High School,Yes,Yes,No,51.2,74.5,C
+101,102,Female,1.9,67.4,6.7,Bachelors,Yes,Yes,Yes,75.5,66.3,D
+102,103,Female,6.0,69.7,6.8,Bachelors,No,No,No,65.3,89.5,B
+103,104,Female,4.8,97.6,4.5,High School,Yes,No,No,60.9,92.7,A
+104,105,Female,3.5,79.5,6.8,MissingInfo,Yes,No,Yes,60.9,87.2,B
+105,106,Female,5.7,100.0,6.0,Masters,Yes,Yes,Yes,65.3,92.5,A
+106,107,Female,3.6,79.4,6.2,High School,Yes,Yes,Yes,74.6,75.7,C
+107,108,Female,2.2,86.8,8.5,High School,Yes,Yes,No,54.3,74.0,C
+108,109,Female,5.8,100.0,5.3,High School,Yes,Yes,No,65.2,100.0,A
+109,110,Male,4.3,100.0,7.8,High School,No,No,Yes,69.5,75.5,C
+110,111,Female,1.9,100.0,6.5,High School,Yes,No,Yes,56.8,61.7,D
+111,112,Male,3.2,97.1,6.5,Bachelors,No,No,No,91.6,91.4,A
+112,113,Female,2.2,95.2,7.7,High School,No,Yes,No,59.8,72.7,C
+113,114,Female,1.4,90.9,7.2,Bachelors,Yes,No,No,62.0,74.6,C
+114,115,Male,4.9,92.8,7.5,MissingInfo,Yes,Yes,No,58.3,96.5,A
+115,116,Female,6.4,79.5,8.0,Masters,No,No,Yes,91.6,94.5,A
+116,117,Male,1.4,76.8,6.4,MissingInfo,No,Yes,No,76.6,59.3,F
+117,118,Female,4.3,85.0,6.1,High School,Yes,Yes,No,58.8,96.2,A
+118,119,Female,2.5,83.3,5.5,Bachelors,Yes,Yes,Yes,83.3,75.3,C
+119,120,Male,2.8,80.5,5.8,Bachelors,Yes,No,No,72.4,73.3,C
+120,121,Female,2.6,92.0,10.0,High School,Yes,Yes,No,73.1,95.8,A
+121,122,Male,2.2,94.6,8.3,High School,Yes,Yes,No,65.9,81.0,B
+122,123,Female,3.6,85.9,5.2,Masters,Yes,No,Yes,61.0,76.5,C
+123,124,Male,2.3,99.8,5.2,Bachelors,Yes,Yes,No,74.1,88.1,B
+124,125,Male,3.9,73.6,7.4,Bachelors,Yes,Yes,No,63.5,88.1,B
+125,126,Female,3.4,83.1,7.5,Bachelors,Yes,Yes,No,91.8,92.1,A
+126,127,Female,3.1,77.8,7.5,Bachelors,Yes,Yes,No,54.8,85.2,B
+127,128,Male,2.1,66.3,6.5,High School,Yes,No,Yes,88.4,63.0,D
+128,129,Female,2.6,84.2,6.6,High School,Yes,No,Yes,68.7,81.1,B
+129,130,Female,4.6,83.8,7.2,High School,Yes,Yes,No,73.6,87.1,B
+130,131,Female,4.3,100.0,6.9,High School,Yes,No,Yes,80.0,100.0,A
+131,132,Male,2.0,91.3,4.1,MissingInfo,Yes,Yes,No,62.4,75.7,C
+132,133,Male,3.6,74.8,6.5,Bachelors,No,Yes,No,80.4,77.3,C
+133,134,Male,4.6,100.0,5.8,Masters,Yes,Yes,No,37.5,85.6,B
+134,135,Male,1.0,97.2,7.0,High School,Yes,Yes,No,61.4,80.8,B
+135,136,Male,4.3,90.8,10.0,Bachelors,Yes,Yes,No,58.9,94.5,A
+136,137,Male,2.5,82.7,7.2,High School,No,No,Yes,55.0,59.7,F
+137,138,Male,4.4,75.4,6.4,High School,Yes,No,No,67.4,80.9,B
+138,139,Male,2.4,81.3,7.9,High School,Yes,Yes,No,74.6,82.6,B
+139,140,Male,0.8,95.9,7.4,Masters,Yes,No,No,78.4,80.2,B
+140,141,Female,1.1,100.0,7.3,Masters,Yes,No,Yes,72.9,82.4,B
+141,142,Male,3.6,100.0,7.5,Bachelors,Yes,No,No,62.0,75.9,C
+142,143,Female,3.9,80.1,9.3,Bachelors,Yes,No,Yes,74.4,88.5,B
+143,144,Female,2.1,73.8,5.4,MissingInfo,Yes,Yes,Yes,71.5,69.6,D
+144,145,Female,4.5,86.4,7.4,High School,Yes,No,Yes,81.2,86.8,B
+145,146,Male,1.0,67.3,5.7,High School,Yes,No,No,79.3,65.2,D
+146,147,Male,3.4,88.2,7.5,High School,Yes,No,Yes,70.4,82.0,B
+147,148,Male,1.7,83.5,5.7,Masters,Yes,Yes,Yes,59.2,46.8,F
+148,149,Male,2.5,80.3,6.3,MissingInfo,Yes,Yes,Yes,62.2,68.6,D
+149,150,Female,3.6,69.1,6.4,High School,Yes,Yes,Yes,63.4,69.2,D
+150,151,Male,2.2,90.1,8.0,PhD,Yes,Yes,No,66.2,84.7,B
+151,152,Male,2.9,79.7,7.9,Masters,Yes,Yes,Yes,73.2,75.9,C
+152,153,Male,5.0,73.3,5.3,High School,Yes,No,Yes,78.6,84.7,B
+153,154,Male,2.6,56.3,6.9,Bachelors,No,Yes,No,69.4,75.7,C
+154,155,Male,4.8,84.7,5.9,Bachelors,Yes,No,No,70.2,95.4,A
+155,156,Female,1.8,100.0,5.3,MissingInfo,Yes,Yes,No,71.7,87.6,B
+156,157,Male,4.3,100.0,6.5,High School,Yes,No,No,63.8,87.7,B
+157,158,Female,5.7,80.4,6.4,Masters,Yes,Yes,Yes,58.9,89.3,B
+158,159,Male,0.5,79.0,9.7,High School,Yes,Yes,No,48.9,63.7,D
+159,160,Female,2.3,89.7,7.3,Masters,Yes,No,Yes,61.7,74.0,C
+160,161,Male,4.4,75.0,5.1,Bachelors,Yes,No,No,75.7,87.9,B
+161,162,Male,3.2,88.0,6.1,Bachelors,Yes,No,No,61.6,76.6,C
+162,163,Female,4.1,92.7,8.0,Masters,Yes,Yes,Yes,67.1,97.3,A
+163,164,Female,2.6,97.3,9.3,Masters,Yes,Yes,No,75.6,90.2,A
+164,165,Female,3.6,84.0,4.9,PhD,Yes,No,No,76.2,88.7,B
+165,166,Male,3.3,83.0,4.5,High School,Yes,Yes,No,57.0,84.8,B
+166,167,Female,5.3,76.2,9.0,Masters,Yes,No,No,82.0,100.0,A
+167,168,Male,3.9,76.7,7.3,High School,Yes,Yes,No,83.5,82.1,B
+168,169,Male,4.0,82.7,5.8,Bachelors,No,Yes,Yes,56.4,75.1,C
+169,170,Female,2.9,88.7,7.4,Bachelors,No,Yes,Yes,60.1,78.1,C
+170,171,Female,2.8,94.1,3.6,Bachelors,Yes,Yes,No,84.3,92.9,A
+171,172,Male,2.9,77.0,6.8,Bachelors,Yes,No,No,68.2,71.8,C
+172,173,Male,4.1,99.9,7.2,MissingInfo,Yes,No,No,43.4,78.5,C
+173,174,Female,2.9,82.3,7.9,High School,Yes,Yes,No,53.2,82.6,B
+174,175,Female,3.9,84.8,5.6,Masters,Yes,No,No,67.0,79.2,C
+175,176,Female,6.6,77.5,6.9,Bachelors,Yes,Yes,No,56.0,89.7,B
+176,177,Male,4.8,60.8,5.7,High School,Yes,Yes,No,65.0,89.2,B
+177,178,Male,3.0,93.8,7.1,High School,No,Yes,No,70.4,81.7,B
+178,179,Male,5.3,92.4,5.7,MissingInfo,Yes,No,No,87.5,96.7,A
+179,180,Male,2.9,82.2,6.3,PhD,Yes,No,No,66.5,73.7,C
+180,181,Male,0.5,85.7,5.6,MissingInfo,Yes,No,No,82.9,77.1,C
+181,182,Male,2.0,90.2,7.6,MissingInfo,Yes,No,Yes,87.1,76.5,C
+182,183,Female,0.7,69.4,7.8,High School,Yes,No,No,87.2,73.2,C
+183,184,Male,3.0,79.7,6.5,Bachelors,Yes,No,No,73.4,83.6,B
+184,185,Male,3.5,92.9,6.8,Masters,Yes,No,No,46.4,85.8,B
+185,186,Male,6.0,72.5,5.1,Bachelors,Yes,No,No,75.5,95.7,A
+186,187,Female,4.0,87.9,6.4,Bachelors,Yes,Yes,No,82.6,89.2,B
+187,188,Male,3.2,71.4,6.7,Bachelors,Yes,Yes,Yes,69.0,83.1,B
+188,189,Male,4.7,89.7,9.9,Bachelors,Yes,Yes,No,90.9,100.0,A
+189,190,Female,0.5,84.6,5.5,Bachelors,Yes,Yes,No,80.3,67.2,D
+190,191,Male,3.9,68.8,8.6,High School,Yes,No,No,76.8,84.6,B
+191,192,Male,4.7,96.6,8.0,Bachelors,Yes,Yes,Yes,83.0,100.0,A
+192,193,Male,1.3,77.7,7.1,Bachelors,Yes,No,No,74.0,75.2,C
+193,194,Male,5.2,76.9,8.9,Bachelors,Yes,Yes,No,40.1,81.1,B
+194,195,Male,4.0,87.0,7.2,High School,Yes,Yes,No,64.0,96.5,A
+195,196,Female,2.9,96.5,7.3,Masters,No,Yes,No,84.4,79.8,C
+196,197,Female,4.4,74.8,6.7,High School,Yes,No,No,60.3,73.4,C
+197,198,Female,6.9,85.6,8.3,Bachelors,Yes,Yes,No,67.3,92.2,A
+198,199,Male,3.8,89.3,8.1,Masters,Yes,Yes,No,57.5,87.3,B
+199,200,Male,3.9,91.9,6.0,Bachelors,No,No,No,91.4,92.5,A
+200,201,Male,2.8,86.8,5.2,High School,Yes,No,Yes,90.2,94.6,A
+201,202,Female,2.2,81.3,6.6,Masters,Yes,Yes,No,59.4,75.5,C
+202,203,Male,4.7,76.7,5.8,Bachelors,Yes,Yes,No,71.8,85.3,B
+203,204,Male,2.2,85.9,6.7,Masters,Yes,Yes,No,61.8,76.7,C
+204,205,Female,3.6,74.3,8.3,Masters,Yes,No,No,77.4,86.8,B
+205,206,Male,2.8,55.8,6.3,Bachelors,Yes,Yes,Yes,76.1,61.1,D
+206,207,Female,4.2,89.4,6.7,Bachelors,Yes,Yes,Yes,79.7,100.0,A
+207,208,Female,4.0,94.0,6.9,High School,No,Yes,No,74.0,90.9,A
+208,209,Female,5.1,61.4,7.8,High School,Yes,Yes,Yes,100.0,96.1,A
+209,210,Male,2.7,74.9,4.1,Bachelors,Yes,No,No,57.7,73.1,C
+210,211,Male,3.1,91.2,6.1,Bachelors,Yes,Yes,No,49.5,81.2,B
+211,212,Male,2.0,100.0,7.1,Bachelors,Yes,Yes,No,65.3,81.8,B
+212,213,Male,2.8,85.2,8.2,High School,Yes,Yes,Yes,51.2,70.0,C
+213,214,Male,4.1,77.7,6.2,High School,Yes,Yes,Yes,52.1,78.5,C
+214,215,Male,4.6,83.2,4.5,Bachelors,Yes,Yes,No,58.0,84.7,B
+215,216,Male,2.1,98.7,7.5,High School,Yes,No,No,58.9,74.7,C
+216,217,Female,4.8,78.5,6.0,Masters,Yes,No,No,58.5,91.2,A
+217,218,Male,5.5,77.0,5.4,High School,Yes,No,No,76.2,93.4,A
+218,219,Female,4.1,80.2,6.1,Bachelors,Yes,No,No,63.9,86.8,B
+219,220,Male,6.3,75.5,6.6,MissingInfo,Yes,No,No,67.8,100.0,A
+220,221,Male,2.3,86.2,6.1,High School,Yes,Yes,No,80.7,84.3,B
+221,222,Male,1.6,100.0,4.2,Bachelors,No,No,No,60.8,71.5,C
+222,223,Female,0.8,88.2,7.9,High School,No,No,Yes,66.8,70.5,C
+223,224,Female,5.7,82.5,8.3,Bachelors,Yes,No,Yes,74.4,89.9,B
+224,225,Female,4.5,82.1,7.6,Bachelors,Yes,Yes,No,46.7,81.1,B
+225,226,Female,3.4,69.4,5.4,Bachelors,Yes,Yes,No,41.4,67.4,D
+226,227,Male,3.9,93.8,6.6,Bachelors,Yes,No,Yes,74.2,82.2,B
+227,228,Female,1.8,84.2,6.8,PhD,Yes,No,Yes,75.9,90.0,A
+228,229,Male,7.2,83.2,7.5,High School,Yes,No,No,94.8,100.0,A
+229,230,Male,3.7,100.0,7.6,High School,Yes,Yes,Yes,71.9,82.7,B
+230,231,Female,3.7,88.0,5.9,PhD,Yes,Yes,No,79.8,98.3,A
+231,232,Female,4.6,77.5,6.9,Bachelors,Yes,Yes,No,67.7,91.5,A
+232,233,Female,4.2,80.7,7.3,PhD,Yes,No,No,73.6,82.2,B
+233,234,Female,3.8,96.5,8.5,Bachelors,Yes,Yes,No,90.0,100.0,A
+234,235,Female,2.3,86.1,7.6,Masters,Yes,Yes,No,44.5,80.2,B
+235,236,Female,4.2,70.6,7.7,Bachelors,Yes,No,No,75.0,85.7,B
+236,237,Female,6.3,94.2,6.9,Masters,Yes,Yes,No,95.6,100.0,A
+237,238,Female,5.5,78.3,8.5,MissingInfo,Yes,No,No,73.4,84.4,B
+238,239,Male,5.9,100.0,7.3,Bachelors,Yes,Yes,No,89.8,100.0,A
+239,240,Female,2.7,95.8,5.8,High School,Yes,No,Yes,62.4,84.6,B
+240,241,Female,2.0,80.5,8.5,High School,Yes,No,Yes,69.6,80.6,B
+241,242,Male,3.3,97.8,7.6,High School,Yes,No,Yes,70.4,85.1,B
+242,243,Female,3.6,85.7,6.3,High School,Yes,No,Yes,43.4,69.4,D
+243,244,Male,5.1,93.5,6.2,High School,Yes,Yes,No,56.0,92.2,A
+244,245,Male,1.0,89.8,7.2,Bachelors,Yes,Yes,No,56.8,76.2,C
+245,246,Female,5.8,76.5,7.4,Bachelors,Yes,Yes,No,79.9,100.0,A
+246,247,Male,3.3,78.6,7.0,Bachelors,Yes,No,No,80.5,92.2,A
+247,248,Male,2.9,95.3,7.2,Bachelors,No,No,No,73.9,76.5,C
+248,249,Male,2.0,81.7,8.8,High School,Yes,Yes,No,79.9,82.7,B
+249,250,Male,1.0,81.0,8.1,High School,Yes,No,No,68.0,67.1,D
+250,251,Female,4.7,75.4,7.0,High School,Yes,Yes,Yes,84.4,88.4,B
+251,252,Male,3.6,89.2,7.9,Bachelors,Yes,No,Yes,70.1,91.0,A
+252,253,Female,1.6,100.0,5.6,High School,No,No,No,70.7,75.8,C
+253,254,Male,1.6,74.3,7.3,High School,Yes,Yes,No,66.8,88.3,B
+254,255,Male,3.0,85.2,9.0,Bachelors,Yes,Yes,Yes,78.2,87.6,B
+255,256,Male,6.0,99.1,6.5,Masters,Yes,Yes,Yes,64.9,96.8,A
+256,257,Male,3.1,84.2,5.8,High School,Yes,No,No,81.7,86.7,B
+257,258,Female,1.2,89.5,6.0,Bachelors,Yes,Yes,Yes,56.4,63.7,D
+258,259,Female,3.1,74.4,5.5,Masters,Yes,Yes,No,56.8,73.0,C
+259,260,Male,3.1,89.3,5.9,Masters,Yes,Yes,No,78.2,94.3,A
+260,261,Male,0.5,83.1,6.4,MissingInfo,Yes,Yes,No,68.9,71.3,C
+261,262,Female,3.4,94.9,5.1,High School,Yes,Yes,No,64.6,79.7,C
+262,263,Male,3.2,96.9,6.8,High School,No,No,No,80.7,81.2,B
+263,264,Male,4.5,100.0,7.9,PhD,Yes,Yes,No,62.7,91.1,A
+264,265,Male,6.3,90.8,5.7,Bachelors,Yes,No,No,67.6,97.5,A
+265,266,Female,5.2,88.3,8.6,Bachelors,Yes,No,No,86.8,100.0,A
+266,267,Female,3.1,86.9,7.4,Masters,Yes,Yes,Yes,88.5,81.6,B
+267,268,Female,1.8,81.5,8.0,Masters,Yes,Yes,No,88.9,83.9,B
+268,269,Male,7.4,88.4,6.0,MissingInfo,Yes,No,No,66.6,100.0,A
+269,270,Male,3.6,82.0,7.8,MissingInfo,Yes,No,No,84.8,80.2,B
+270,271,Female,3.5,86.7,5.5,Masters,Yes,Yes,No,58.6,75.1,C
+271,272,Female,3.5,98.2,7.9,High School,No,Yes,No,59.1,78.2,C
+272,273,Female,3.8,74.9,7.0,PhD,Yes,Yes,Yes,41.8,64.7,D
+273,274,Female,3.3,96.4,7.5,High School,Yes,No,No,90.1,97.8,A
+274,275,Male,2.6,98.2,5.4,High School,No,Yes,No,59.6,74.4,C
+275,276,Female,2.7,83.8,5.7,PhD,Yes,Yes,No,68.5,76.4,C
+276,277,Male,3.5,63.8,7.5,High School,Yes,No,No,59.1,76.3,C
+277,278,Female,2.7,78.9,5.7,High School,Yes,No,Yes,78.3,88.3,B
+278,279,Male,2.4,98.0,7.4,High School,Yes,Yes,No,65.5,94.0,A
+279,280,Female,3.7,84.8,5.2,PhD,No,Yes,Yes,54.3,58.8,F
+280,281,Female,3.1,75.0,7.8,Bachelors,No,No,No,75.3,81.1,B
+281,282,Female,5.8,80.0,5.3,Masters,Yes,Yes,No,52.8,84.5,B
+282,283,Female,0.5,93.4,7.5,High School,Yes,Yes,Yes,60.0,69.9,D
+283,284,Male,5.1,90.5,7.6,Masters,Yes,No,No,44.7,82.2,B
+284,285,Female,5.4,82.6,6.0,Masters,Yes,Yes,Yes,52.9,83.3,B
+285,286,Male,0.5,81.3,7.5,High School,Yes,No,Yes,72.1,69.5,D
+286,287,Male,3.0,81.1,7.1,Bachelors,Yes,No,No,46.4,68.5,D
+287,288,Male,2.9,75.8,6.2,High School,No,Yes,No,52.2,61.5,D
+288,289,Male,1.4,100.0,5.6,MissingInfo,No,Yes,No,70.0,72.3,C
+289,290,Female,2.3,81.8,4.4,Bachelors,Yes,No,No,63.5,74.1,C
+290,291,Male,1.8,97.2,7.2,MissingInfo,Yes,No,No,93.9,94.9,A
+291,292,Male,6.1,100.0,4.9,High School,Yes,No,No,92.0,100.0,A
+292,293,Male,4.9,95.0,6.9,Masters,Yes,No,Yes,59.6,84.5,B
+293,294,Female,5.4,80.7,6.5,Masters,Yes,Yes,Yes,76.7,93.7,A
+294,295,Female,4.6,89.0,7.6,Masters,Yes,No,No,79.0,100.0,A
+295,296,Female,1.8,84.8,6.4,MissingInfo,Yes,Yes,No,62.8,81.6,B
+296,297,Female,2.7,76.0,6.4,Bachelors,Yes,Yes,No,52.1,70.9,C
+297,298,Male,4.2,88.2,7.7,High School,Yes,Yes,No,69.9,89.6,B
+298,299,Male,1.7,73.2,7.2,Masters,No,Yes,No,67.9,69.2,D
+299,300,Female,4.6,96.9,7.2,Masters,Yes,No,Yes,64.8,82.3,B
+300,301,Male,3.1,80.4,7.4,Bachelors,Yes,Yes,Yes,75.3,80.9,B
+301,302,Male,2.9,87.0,5.0,High School,Yes,Yes,No,61.0,82.4,B
+302,303,Male,4.6,87.8,7.7,Bachelors,Yes,Yes,No,56.2,91.0,A
+303,304,Female,4.2,82.4,7.5,High School,No,No,No,71.3,81.6,B
+304,305,Female,3.0,90.9,5.6,Bachelors,Yes,No,Yes,74.6,83.2,B
+305,306,Male,5.2,80.3,6.5,Bachelors,Yes,Yes,No,55.9,80.7,B
+306,307,Female,1.9,93.7,6.8,Masters,Yes,Yes,Yes,81.1,87.2,B
+307,308,Female,4.4,71.5,6.6,High School,Yes,Yes,Yes,48.8,72.8,C
+308,309,Female,4.4,86.3,7.2,Bachelors,Yes,No,No,63.1,85.2,B
+309,310,Female,3.0,100.0,8.5,High School,Yes,No,Yes,66.9,83.3,B
+310,311,Female,4.0,75.0,8.1,High School,Yes,Yes,No,62.4,82.6,B
+311,312,Male,1.6,78.2,5.2,Masters,Yes,No,Yes,63.2,63.4,D
+312,313,Female,4.9,90.1,7.5,MissingInfo,Yes,Yes,No,92.5,100.0,A
+313,314,Male,3.2,86.8,8.4,Bachelors,Yes,No,No,59.8,79.4,C
+314,315,Male,2.7,88.5,7.3,Masters,Yes,Yes,No,99.3,100.0,A
+315,316,Female,5.1,89.9,8.1,PhD,Yes,Yes,No,75.2,100.0,A
+316,317,Male,2.4,91.3,9.2,Masters,No,Yes,Yes,71.1,72.9,C
+317,318,Male,1.4,96.1,8.0,High School,No,Yes,No,75.7,79.2,C
+318,319,Male,1.2,89.1,7.1,MissingInfo,Yes,No,No,100.0,84.2,B
+319,320,Female,4.4,82.6,8.1,Bachelors,Yes,Yes,Yes,58.1,80.7,B
+320,321,Female,1.6,91.7,7.0,High School,Yes,No,No,56.6,85.3,B
+321,322,Male,6.1,100.0,6.8,High School,Yes,No,Yes,60.9,93.1,A
+322,323,Female,0.5,83.7,6.4,Bachelors,Yes,Yes,No,70.4,73.5,C
+323,324,Female,6.0,75.3,8.7,High School,Yes,Yes,No,49.3,90.8,A
+324,325,Female,3.8,96.1,5.8,High School,Yes,Yes,Yes,70.3,80.8,B
+325,326,Female,3.4,83.8,8.6,High School,Yes,No,No,90.3,88.9,B
+326,327,Male,2.7,63.3,7.4,Masters,No,Yes,No,71.8,63.7,D
+327,328,Male,4.1,93.5,5.1,PhD,Yes,Yes,No,66.5,82.6,B
+328,329,Female,3.4,79.6,7.2,High School,Yes,Yes,No,62.6,63.7,D
+329,330,Female,5.2,84.1,4.3,PhD,Yes,No,No,80.8,96.6,A
+330,331,Male,3.7,88.3,7.6,PhD,Yes,Yes,No,60.1,97.0,A
+331,332,Male,3.7,86.9,7.9,Masters,No,Yes,No,92.2,93.3,A
+332,333,Female,3.0,92.1,6.1,High School,Yes,Yes,Yes,93.2,82.8,B
+333,334,Male,3.4,80.6,6.9,Masters,Yes,Yes,No,73.1,81.2,B
+334,335,Female,4.0,90.1,9.1,MissingInfo,Yes,No,No,69.9,88.7,B
+335,336,Female,0.9,82.4,6.2,Masters,Yes,Yes,No,82.4,71.2,C
+336,337,Male,1.5,92.4,5.5,High School,Yes,No,No,83.1,87.1,B
+337,338,Male,4.6,91.2,8.6,Bachelors,Yes,No,No,60.3,94.9,A
+338,339,Female,3.8,75.6,9.2,Bachelors,Yes,No,No,63.7,76.1,C
+339,340,Female,3.2,95.9,6.8,Bachelors,Yes,No,No,54.1,85.1,B
+340,341,Male,3.5,79.6,8.0,High School,Yes,Yes,No,74.9,96.3,A
+341,342,Female,4.0,93.1,8.4,High School,Yes,Yes,No,78.0,100.0,A
+342,343,Male,2.7,88.7,5.9,Masters,Yes,No,No,53.8,92.0,A
+343,344,Female,2.3,100.0,6.2,PhD,Yes,Yes,No,64.5,77.2,C
+344,345,Male,3.8,82.8,8.3,High School,Yes,No,No,53.8,97.5,A
+345,346,Male,2.0,81.5,8.8,MissingInfo,Yes,Yes,Yes,59.2,70.6,C
+346,347,Male,4.1,84.8,7.5,High School,Yes,No,No,76.6,87.2,B
+347,348,Female,0.9,82.0,5.7,Masters,Yes,No,No,61.2,69.0,D
+348,349,Female,5.0,93.0,9.2,Masters,Yes,Yes,Yes,66.4,90.2,A
+349,350,Male,4.2,68.8,6.2,Masters,Yes,Yes,Yes,50.5,74.0,C
+350,351,Female,3.9,74.5,6.4,MissingInfo,Yes,No,No,72.2,75.3,C
+351,352,Male,5.0,74.3,7.2,High School,Yes,No,No,69.5,86.5,B
+352,353,Male,6.0,94.5,8.7,PhD,Yes,Yes,No,61.3,100.0,A
+353,354,Female,5.0,100.0,7.8,High School,Yes,No,Yes,67.7,93.6,A
+354,355,Female,0.7,84.0,7.3,Masters,Yes,Yes,Yes,72.2,72.0,C
+355,356,Male,1.6,83.3,7.4,Masters,Yes,Yes,No,60.2,76.2,C
+356,357,Female,2.6,85.7,6.9,Masters,Yes,No,No,52.3,80.9,B
+357,358,Female,3.5,96.6,7.5,High School,Yes,No,Yes,91.7,85.3,B
+358,359,Male,4.3,75.7,3.8,PhD,Yes,No,No,62.4,81.9,B
+359,360,Male,2.4,87.4,6.4,High School,Yes,No,No,68.8,78.0,C
+360,361,Female,3.8,94.8,7.1,High School,Yes,Yes,Yes,82.1,93.6,A
+361,362,Male,2.4,90.0,5.4,Masters,Yes,No,Yes,100.0,95.1,A
+362,363,Male,2.6,86.9,7.3,Bachelors,Yes,Yes,Yes,55.1,66.7,D
+363,364,Female,1.4,95.0,6.6,Masters,Yes,Yes,No,75.4,75.6,C
+364,365,Male,2.1,58.0,8.9,Bachelors,Yes,Yes,No,61.5,57.4,F
+365,366,Male,1.5,91.8,8.7,High School,Yes,Yes,No,63.5,75.4,C
+366,367,Female,2.0,78.5,6.2,Masters,Yes,Yes,No,61.4,80.5,B
+367,368,Female,5.1,66.7,6.6,Bachelors,No,Yes,No,56.5,75.1,C
+368,369,Male,2.1,90.1,6.7,High School,No,Yes,No,69.5,67.8,D
+369,370,Male,7.4,98.7,6.3,Masters,Yes,Yes,No,52.3,97.4,A
+370,371,Female,4.2,83.6,7.0,Bachelors,Yes,No,Yes,81.4,80.2,B
+371,372,Female,3.8,94.5,5.9,Bachelors,Yes,Yes,No,70.7,82.8,B
+372,373,Female,2.2,100.0,5.4,Bachelors,Yes,Yes,No,75.1,87.8,B
+373,374,Female,4.6,98.1,7.5,Masters,Yes,No,No,64.4,85.8,B
+374,375,Male,2.6,100.0,7.6,Masters,Yes,No,No,65.6,91.7,A
+375,376,Female,3.7,92.4,5.8,Masters,Yes,No,Yes,73.5,84.9,B
+376,377,Female,7.3,85.8,7.9,High School,Yes,Yes,No,56.0,99.3,A
+377,378,Male,3.4,69.0,6.0,Masters,Yes,No,No,65.7,74.3,C
+378,379,Female,5.2,82.5,7.1,Masters,Yes,Yes,No,59.7,93.3,A
+379,380,Male,2.4,76.6,7.8,Masters,Yes,Yes,No,59.3,79.4,C
+380,381,Female,3.4,100.0,6.8,Bachelors,No,Yes,No,44.7,77.4,C
+381,382,Female,6.2,83.2,7.3,PhD,Yes,No,No,86.1,100.0,A
+382,383,Female,2.6,86.2,6.2,Masters,Yes,Yes,No,61.8,76.8,C
+383,384,Male,6.2,90.5,6.6,High School,Yes,Yes,No,84.0,100.0,A
+384,385,Male,4.6,85.4,6.6,Bachelors,No,Yes,No,82.8,88.6,B
+385,386,Female,2.7,100.0,5.9,PhD,Yes,No,No,54.6,79.1,C
+386,387,Male,4.4,78.8,6.6,High School,Yes,No,No,56.9,79.4,C
+387,388,Male,5.0,86.9,4.9,MissingInfo,Yes,Yes,No,100.0,100.0,A
+388,389,Male,4.4,77.6,6.2,Masters,Yes,No,Yes,91.0,86.7,B
+389,390,Male,1.1,71.8,6.5,Bachelors,Yes,Yes,Yes,69.6,69.5,D
+390,391,Male,2.4,78.9,6.5,High School,Yes,No,No,73.1,86.3,B
+391,392,Male,3.1,84.6,6.5,High School,Yes,Yes,No,62.4,87.3,B
+392,393,Female,3.4,80.7,6.7,MissingInfo,No,No,No,75.2,72.1,C
+393,394,Female,4.4,78.1,7.4,High School,Yes,Yes,No,61.4,92.3,A
+394,395,Male,3.8,70.9,7.8,Masters,Yes,No,Yes,45.6,67.6,D
+395,396,Female,1.5,84.2,6.0,Bachelors,Yes,Yes,No,54.1,72.7,C
+396,397,Female,4.1,70.0,5.4,High School,Yes,Yes,No,70.3,76.1,C
+397,398,Female,4.4,92.6,5.5,High School,No,Yes,No,56.4,81.2,B
+398,399,Female,4.3,85.8,6.2,Bachelors,Yes,Yes,No,69.2,90.4,A
+399,400,Male,5.1,70.4,6.4,MissingInfo,Yes,Yes,No,57.1,73.2,C
+400,401,Female,4.8,81.9,5.9,Bachelors,Yes,No,Yes,60.6,85.2,B
+401,402,Female,4.2,77.5,5.2,Bachelors,Yes,Yes,No,80.2,96.4,A
+402,403,Male,3.4,88.2,6.3,High School,Yes,No,Yes,73.0,81.9,B
+403,404,Male,1.0,98.4,7.0,Bachelors,Yes,No,No,69.9,86.5,B
+404,405,Female,4.1,66.2,7.5,Bachelors,Yes,No,No,80.5,84.7,B
+405,406,Female,3.8,86.2,6.1,PhD,Yes,No,No,75.8,93.0,A
+406,407,Female,3.9,83.4,6.3,Bachelors,Yes,No,No,87.4,78.9,C
+407,408,Female,1.6,91.7,5.7,Bachelors,Yes,Yes,No,64.5,90.4,A
+408,409,Female,1.9,87.1,6.8,High School,No,No,No,64.8,80.1,B
+409,410,Female,5.1,77.5,5.8,MissingInfo,Yes,Yes,Yes,54.4,78.1,C
+410,411,Male,3.4,81.8,7.5,High School,Yes,No,No,64.9,70.1,C
+411,412,Female,4.5,77.0,4.7,High School,Yes,No,No,81.6,90.2,A
+412,413,Female,3.5,95.8,6.4,Masters,Yes,Yes,No,85.6,86.5,B
+413,414,Male,3.5,85.2,7.2,Bachelors,Yes,Yes,No,81.5,93.5,A
+414,415,Male,4.9,100.0,7.0,Bachelors,No,Yes,Yes,48.5,83.3,B
+415,416,Male,2.7,84.4,10.0,Bachelors,Yes,No,Yes,83.0,81.2,B
+416,417,Male,3.6,77.9,7.2,Masters,No,No,No,47.9,76.0,C
+417,418,Female,2.8,69.9,5.6,High School,Yes,Yes,No,80.8,84.9,B
+418,419,Female,2.8,67.0,6.7,Masters,Yes,No,No,65.6,79.2,C
+419,420,Female,3.0,69.2,4.7,Bachelors,No,No,No,78.4,72.8,C
+420,421,Female,3.8,87.7,6.7,Bachelors,Yes,Yes,Yes,54.0,69.9,D
+421,422,Female,2.8,90.1,5.8,Bachelors,No,Yes,No,84.1,89.6,B
+422,423,Female,5.4,69.2,7.9,High School,Yes,No,Yes,52.4,77.3,C
+423,424,Male,2.2,94.0,6.1,Masters,No,No,No,62.0,64.6,D
+424,425,Female,3.2,80.2,6.7,Bachelors,Yes,No,Yes,58.0,81.8,B
+425,426,Male,2.8,86.5,6.0,High School,Yes,Yes,No,48.9,86.2,B
+426,427,Male,5.7,100.0,8.9,Bachelors,Yes,Yes,Yes,71.1,100.0,A
+427,428,Female,3.8,94.0,6.4,MissingInfo,Yes,Yes,No,91.7,100.0,A
+428,429,Male,5.0,82.3,9.0,Bachelors,Yes,Yes,No,100.0,100.0,A
+429,430,Female,1.3,76.1,7.8,MissingInfo,Yes,Yes,No,71.2,72.0,C
+430,431,Male,3.9,63.5,7.4,High School,Yes,No,No,83.4,81.2,B
+431,432,Female,4.8,77.8,7.2,High School,Yes,Yes,No,72.8,100.0,A
+432,433,Male,3.6,82.9,7.3,High School,Yes,No,Yes,76.0,79.7,C
+433,434,Female,5.1,75.1,4.5,Bachelors,Yes,Yes,No,65.9,89.4,B
+434,435,Female,2.7,83.7,6.5,High School,Yes,No,No,72.3,77.8,C
+435,436,Female,5.6,85.8,7.8,High School,Yes,Yes,Yes,76.4,93.4,A
+436,437,Female,6.9,82.8,6.7,MissingInfo,Yes,Yes,Yes,63.1,100.0,A
+437,438,Female,3.0,78.5,5.1,Masters,Yes,Yes,No,69.1,76.5,C
+438,439,Male,2.8,86.7,6.7,Masters,Yes,No,No,69.3,79.3,C
+439,440,Male,5.7,89.4,8.8,High School,No,No,No,79.9,100.0,A
+440,441,Male,5.9,74.1,8.3,High School,Yes,Yes,No,57.2,98.9,A
+441,442,Female,2.7,99.1,6.7,High School,Yes,Yes,Yes,69.4,87.5,B
+442,443,Male,2.9,84.0,7.9,Masters,Yes,No,Yes,92.9,85.2,B
+443,444,Female,3.1,85.2,6.4,MissingInfo,Yes,Yes,No,84.0,86.0,B
+444,445,Female,1.5,92.1,4.8,Bachelors,Yes,Yes,Yes,86.2,80.7,B
+445,446,Male,2.1,87.3,5.7,High School,Yes,No,No,70.3,79.9,C
+446,447,Male,2.0,94.5,8.7,Bachelors,Yes,No,No,73.9,79.1,C
+447,448,Female,2.3,87.9,6.5,High School,Yes,Yes,Yes,82.0,87.1,B
+448,449,Male,3.4,78.9,6.5,Bachelors,Yes,Yes,No,88.7,90.7,A
+449,450,Female,3.9,88.6,6.4,Bachelors,Yes,No,Yes,46.6,64.6,D
+450,451,Female,5.8,73.6,9.1,Masters,No,Yes,No,54.2,77.9,C
+451,452,Female,2.0,86.1,8.8,High School,Yes,Yes,Yes,85.7,82.0,B
+452,453,Female,5.0,84.7,9.5,High School,Yes,No,No,66.7,92.8,A
+453,454,Female,3.2,82.9,6.6,MissingInfo,No,No,No,61.9,85.4,B
+454,455,Male,3.4,83.7,7.2,High School,Yes,Yes,No,55.0,80.7,B
+455,456,Male,4.5,66.2,5.0,High School,Yes,No,No,63.3,72.7,C
+456,457,Female,1.8,79.5,8.6,High School,Yes,No,Yes,53.2,68.8,D
+457,458,Female,4.1,85.9,5.4,High School,No,Yes,No,95.1,89.9,B
+458,459,Male,3.7,86.6,7.1,Bachelors,No,No,No,69.7,83.3,B
+459,460,Male,4.2,74.7,5.5,Masters,Yes,Yes,No,69.3,86.8,B
+460,461,Female,3.9,97.7,6.1,High School,Yes,Yes,Yes,77.1,98.2,A
+461,462,Male,7.2,76.3,5.8,Bachelors,Yes,No,No,81.5,100.0,A
+462,463,Female,2.5,94.7,6.1,Masters,Yes,Yes,Yes,81.4,95.1,A
+463,464,Male,2.7,89.3,6.2,Bachelors,Yes,Yes,No,82.9,93.5,A
+464,465,Female,2.6,78.5,6.1,PhD,No,Yes,Yes,62.4,63.2,D
+465,466,Male,2.7,100.0,7.8,PhD,Yes,Yes,No,66.4,100.0,A
+466,467,Female,2.5,73.1,5.5,High School,Yes,No,Yes,79.2,77.1,C
+467,468,Male,5.3,94.2,7.1,Masters,Yes,No,No,63.7,88.8,B
+468,469,Male,5.6,95.0,8.3,Bachelors,Yes,No,No,69.9,100.0,A
+469,470,Female,2.6,78.3,6.2,MissingInfo,Yes,Yes,Yes,74.8,89.9,B
+470,471,Male,2.3,98.9,5.9,Bachelors,Yes,Yes,No,79.4,87.6,B
+471,472,Female,4.2,82.5,6.5,MissingInfo,No,Yes,Yes,48.7,68.0,D
+472,473,Male,2.7,87.9,8.2,Masters,No,Yes,No,78.6,82.2,B
+473,474,Female,4.4,87.6,7.0,High School,Yes,Yes,No,67.2,94.0,A
+474,475,Male,3.8,83.7,6.2,Bachelors,No,No,No,78.5,90.9,A
+475,476,Female,1.2,93.1,7.4,MissingInfo,Yes,No,No,79.3,85.0,B
+476,477,Male,5.8,92.9,5.5,PhD,Yes,No,Yes,89.3,100.0,A
+477,478,Female,6.2,67.5,7.6,High School,Yes,Yes,No,86.2,100.0,A
+478,479,Male,2.6,98.0,7.3,Masters,Yes,No,Yes,86.2,87.4,B
+479,480,Female,2.9,68.4,6.4,High School,No,Yes,No,87.3,84.8,B
+480,481,Female,3.9,95.3,5.8,High School,Yes,Yes,No,73.5,89.5,B
+481,482,Female,4.0,96.3,5.7,Bachelors,Yes,No,No,70.4,92.3,A
+482,483,Male,4.5,74.1,7.4,High School,Yes,No,Yes,80.5,86.6,B
+483,484,Female,6.5,80.9,8.3,Masters,Yes,Yes,No,78.8,100.0,A
+484,485,Male,3.2,73.9,6.0,High School,Yes,Yes,No,66.3,75.7,C
+485,486,Female,2.3,82.9,7.4,Masters,Yes,Yes,Yes,74.9,87.3,B
+486,487,Male,1.4,81.9,4.3,High School,Yes,No,No,69.6,66.6,D
+487,488,Female,2.4,92.8,6.1,High School,Yes,Yes,No,59.8,74.1,C
+488,489,Male,3.5,98.1,6.8,High School,Yes,No,No,85.5,100.0,A
+489,490,Male,6.2,99.0,5.7,High School,Yes,Yes,No,70.7,100.0,A
+490,491,Female,2.7,79.4,5.7,High School,Yes,Yes,No,94.6,74.3,C
+491,492,Male,3.8,82.9,6.0,High School,Yes,Yes,Yes,50.5,71.1,C
+492,493,Male,3.5,68.2,7.2,Bachelors,Yes,Yes,No,63.3,66.7,D
+493,494,Female,5.3,76.9,6.6,High School,Yes,Yes,Yes,70.4,82.1,B
+494,495,Male,7.3,94.6,4.1,Bachelors,Yes,No,No,83.6,88.5,B
+495,496,Male,2.7,100.0,4.3,Bachelors,No,No,No,74.8,79.4,C
+496,497,Male,2.8,72.7,6.1,PhD,Yes,No,No,73.7,71.0,C
+497,498,Female,5.1,79.1,7.3,MissingInfo,Yes,No,No,56.5,85.4,B
+498,499,Male,4.5,84.7,3.5,Bachelors,No,No,Yes,56.1,61.8,D
+499,500,Female,6.3,87.8,6.2,High School,Yes,No,No,73.9,99.6,A
+500,501,Male,4.4,76.9,6.2,High School,Yes,No,No,53.6,76.1,C
+501,502,Male,3.0,89.2,8.5,MissingInfo,Yes,Yes,Yes,63.6,90.4,A
+502,503,Male,4.4,80.3,6.3,High School,No,Yes,No,76.0,93.3,A
+503,504,Female,5.2,84.9,7.3,High School,No,Yes,No,58.2,88.9,B
+504,505,Male,4.7,90.5,7.0,High School,Yes,Yes,No,89.3,99.0,A
+505,506,Male,4.3,85.1,4.2,High School,Yes,Yes,Yes,84.7,100.0,A
+506,507,Female,5.1,80.6,7.7,High School,Yes,No,No,51.1,74.5,C
+507,508,Male,5.3,83.9,7.1,Masters,No,Yes,Yes,58.8,72.8,C
+508,509,Female,5.6,84.1,7.4,High School,No,Yes,Yes,42.6,76.1,C
+509,510,Female,4.5,81.3,10.0,Bachelors,Yes,Yes,Yes,60.6,99.5,A
+510,511,Male,3.2,82.4,4.3,High School,Yes,Yes,Yes,79.2,79.9,C
+511,512,Female,3.7,100.0,8.9,High School,Yes,Yes,Yes,65.0,88.2,B
+512,513,Male,5.3,90.6,6.5,MissingInfo,Yes,Yes,No,75.5,88.9,B
+513,514,Female,2.3,82.0,7.1,High School,Yes,Yes,No,51.7,77.9,C
+514,515,Female,4.1,92.0,6.7,Masters,Yes,Yes,Yes,79.6,97.2,A
+515,516,Male,2.9,81.7,6.3,Bachelors,Yes,No,Yes,63.3,79.3,C
+516,517,Female,3.5,96.7,6.1,High School,Yes,No,No,70.1,84.2,B
+517,518,Female,5.4,88.7,7.2,MissingInfo,No,Yes,No,68.9,86.3,B
+518,519,Female,3.8,83.9,5.0,High School,Yes,Yes,Yes,54.7,67.6,D
+519,520,Female,3.6,89.5,7.7,PhD,Yes,Yes,Yes,56.2,80.7,B
+520,521,Female,1.5,69.3,6.3,High School,Yes,No,Yes,81.6,64.7,D
+521,522,Male,4.6,73.7,5.4,PhD,No,Yes,Yes,74.8,71.8,C
+522,523,Female,4.5,73.1,6.3,High School,Yes,Yes,Yes,82.6,84.9,B
+523,524,Male,6.7,86.4,8.3,Bachelors,Yes,No,No,73.9,100.0,A
+524,525,Female,3.0,100.0,6.2,Masters,Yes,Yes,Yes,71.7,82.4,B
+525,526,Male,3.8,100.0,7.2,MissingInfo,Yes,Yes,No,49.3,87.3,B
+526,527,Male,3.9,91.4,5.9,MissingInfo,Yes,Yes,Yes,66.8,84.8,B
+527,528,Female,5.9,90.0,7.7,Masters,Yes,No,No,69.7,96.4,A
+528,529,Female,3.4,67.0,7.6,PhD,No,No,No,93.4,84.3,B
+529,530,Female,3.9,79.6,9.0,High School,Yes,No,No,78.2,84.5,B
+530,531,Male,4.4,77.1,6.6,High School,Yes,Yes,No,88.4,94.7,A
+531,532,Female,3.8,78.8,7.6,High School,Yes,Yes,No,77.2,89.6,B
+532,533,Male,2.8,83.3,6.9,Bachelors,Yes,No,No,61.5,68.6,D
+533,534,Male,3.8,80.3,8.4,Bachelors,Yes,No,No,71.4,92.8,A
+534,535,Male,5.1,65.2,5.9,Bachelors,Yes,Yes,No,72.8,80.7,B
+535,536,Female,2.0,92.5,7.7,High School,Yes,No,No,58.7,77.6,C
+536,537,Female,3.7,74.3,6.6,Masters,Yes,Yes,No,65.4,87.7,B
+537,538,Male,2.4,87.4,6.7,High School,Yes,Yes,No,67.5,86.0,B
+538,539,Male,5.3,100.0,6.9,High School,Yes,No,No,89.3,100.0,A
+539,540,Female,1.2,75.8,7.1,Bachelors,Yes,Yes,Yes,45.0,57.3,F
+540,541,Male,2.7,59.7,6.7,Masters,No,No,Yes,84.5,75.6,C
+541,542,Female,4.1,82.1,7.1,Masters,Yes,Yes,No,58.8,87.3,B
+542,543,Male,5.8,96.0,8.7,Bachelors,Yes,Yes,Yes,53.5,88.8,B
+543,544,Female,3.4,100.0,8.0,High School,Yes,No,No,84.2,91.8,A
+544,545,Male,2.7,72.7,7.8,Bachelors,Yes,No,Yes,78.8,66.0,D
+545,546,Female,6.3,90.0,6.3,High School,Yes,Yes,No,85.1,100.0,A
+546,547,Male,1.3,80.3,5.7,Bachelors,No,Yes,No,79.6,71.1,C
+547,548,Female,0.5,83.9,7.9,Bachelors,Yes,No,No,94.7,88.8,B
+548,549,Female,4.2,100.0,7.9,High School,Yes,Yes,No,76.7,100.0,A
+549,550,Male,2.7,70.0,8.6,High School,Yes,No,No,68.1,85.2,B
+550,551,Male,2.0,87.5,6.1,MissingInfo,Yes,No,No,74.1,75.4,C
+551,552,Female,4.6,89.7,6.5,MissingInfo,Yes,Yes,No,84.9,100.0,A
+552,553,Male,3.9,95.9,4.8,Bachelors,Yes,Yes,Yes,60.6,78.9,C
+553,554,Female,2.7,86.0,6.3,High School,Yes,Yes,No,62.2,83.4,B
+554,555,Male,1.6,88.1,8.0,High School,No,No,No,66.3,63.4,D
+555,556,Female,4.8,81.1,6.2,Bachelors,Yes,Yes,No,44.7,80.7,B
+556,557,Female,4.5,87.7,7.6,MissingInfo,Yes,Yes,No,71.7,80.8,B
+557,558,Female,3.4,81.6,6.6,High School,Yes,Yes,No,47.4,73.1,C
+558,559,Female,6.3,91.2,7.2,Masters,Yes,No,Yes,70.6,99.8,A
+559,560,Female,1.9,81.3,5.4,High School,Yes,Yes,Yes,80.4,73.5,C
+560,561,Female,1.2,88.8,6.9,MissingInfo,Yes,Yes,No,64.3,68.2,D
+561,562,Male,2.5,84.7,3.2,Bachelors,No,No,No,90.1,83.9,B
+562,563,Male,3.4,96.3,6.6,Masters,No,No,No,52.5,75.3,C
+563,564,Male,3.9,84.5,4.8,High School,No,No,Yes,84.3,78.7,C
+564,565,Female,3.1,67.3,8.2,Bachelors,Yes,Yes,No,78.1,82.8,B
+565,566,Female,4.0,97.6,7.7,High School,Yes,Yes,No,49.4,100.0,A
+566,567,Female,1.6,75.9,7.4,High School,Yes,No,No,100.0,92.6,A
+567,568,Female,5.7,78.5,8.6,MissingInfo,Yes,Yes,Yes,69.2,99.1,A
+568,569,Male,3.4,79.0,5.7,MissingInfo,Yes,No,Yes,59.5,76.2,C
+569,570,Male,5.2,98.7,8.9,PhD,Yes,No,Yes,53.1,90.9,A
+570,571,Female,4.0,63.6,7.9,Bachelors,Yes,Yes,Yes,67.4,63.3,D
+571,572,Male,4.2,100.0,6.5,Masters,Yes,No,Yes,68.5,85.0,B
+572,573,Male,4.4,95.6,8.2,High School,Yes,No,Yes,71.2,88.7,B
+573,574,Female,4.2,87.2,5.5,High School,Yes,Yes,No,66.4,75.3,C
+574,575,Male,4.5,84.5,5.8,High School,Yes,Yes,No,77.6,84.9,B
+575,576,Female,5.5,87.9,6.1,Bachelors,Yes,Yes,No,65.3,81.1,B
+576,577,Male,3.8,90.2,6.2,Bachelors,Yes,Yes,Yes,46.8,75.6,C
+577,578,Female,4.6,91.5,5.5,High School,Yes,Yes,No,68.2,95.5,A
+578,579,Female,3.4,90.6,8.3,Bachelors,Yes,No,No,41.6,83.3,B
+579,580,Female,5.7,85.9,6.5,Masters,Yes,No,Yes,74.2,95.7,A
+580,581,Female,2.5,83.0,7.2,Bachelors,Yes,Yes,No,58.2,70.4,C
+581,582,Male,6.2,83.5,6.1,High School,Yes,Yes,Yes,72.0,82.7,B
+582,583,Female,3.4,83.1,4.6,High School,Yes,No,No,85.8,76.7,C
+583,584,Female,1.4,96.3,7.1,High School,Yes,Yes,No,58.6,68.4,D
+584,585,Female,3.7,90.9,4.5,High School,Yes,No,No,82.7,84.6,B
+585,586,Male,2.5,55.6,6.7,Bachelors,Yes,Yes,No,64.8,67.7,D
+586,587,Female,4.8,91.6,5.2,Bachelors,No,Yes,No,91.0,89.2,B
+587,588,Male,2.5,86.9,9.2,Masters,Yes,Yes,No,65.6,85.0,B
+588,589,Female,2.8,84.8,7.9,Bachelors,Yes,No,No,59.9,77.3,C
+589,590,Male,0.7,81.1,6.9,Masters,Yes,Yes,Yes,78.2,72.2,C
+590,591,Male,2.8,96.2,8.3,High School,Yes,No,Yes,64.8,89.0,B
+591,592,Female,0.5,94.5,5.8,Bachelors,Yes,Yes,No,59.9,63.2,D
+592,593,Male,1.1,77.3,7.5,Masters,Yes,Yes,No,64.3,73.2,C
+593,594,Female,4.6,89.1,7.0,High School,No,Yes,No,69.5,87.0,B
+594,595,Female,4.7,75.3,7.1,High School,Yes,No,Yes,86.1,88.5,B
+595,596,Female,4.1,71.2,8.3,PhD,Yes,No,No,46.8,80.4,B
+596,597,Male,2.0,78.7,7.7,High School,Yes,Yes,Yes,70.3,80.2,B
+597,598,Male,3.4,93.6,7.1,Masters,No,Yes,No,77.5,80.9,B
+598,599,Female,3.5,94.5,4.8,High School,Yes,Yes,No,72.3,86.4,B
+599,600,Female,1.8,90.1,5.6,Masters,Yes,Yes,No,85.7,86.3,B
+600,601,Male,5.8,92.3,6.7,High School,Yes,Yes,Yes,69.1,93.4,A
+601,602,Female,4.8,90.2,6.9,High School,Yes,No,No,67.8,95.1,A
+602,603,Female,3.2,78.6,5.4,Bachelors,Yes,No,No,77.1,83.9,B
+603,604,Female,3.5,89.3,9.7,High School,Yes,Yes,No,71.2,100.0,A
+604,605,Male,3.8,93.0,8.6,Bachelors,Yes,Yes,No,65.3,80.9,B
+605,606,Male,0.5,92.5,7.5,High School,Yes,No,No,76.2,76.4,C
+606,607,Male,3.1,96.9,6.9,High School,No,No,No,62.2,73.6,C
+607,608,Female,2.5,92.1,6.5,High School,Yes,Yes,No,62.7,84.0,B
+608,609,Female,2.0,88.5,5.7,High School,No,Yes,Yes,63.7,58.6,F
+609,610,Female,3.1,95.7,6.9,MissingInfo,Yes,Yes,No,86.2,96.3,A
+610,611,Male,6.2,84.7,7.1,High School,Yes,Yes,No,31.3,78.8,C
+611,612,Female,4.5,76.2,5.3,Bachelors,Yes,Yes,Yes,74.7,79.8,C
+612,613,Female,2.6,83.4,7.2,High School,Yes,Yes,Yes,70.4,70.0,C
+613,614,Female,4.4,77.6,6.6,High School,Yes,No,No,49.8,75.0,C
+614,615,Female,5.6,78.2,4.5,MissingInfo,Yes,Yes,Yes,73.7,95.0,A
+615,616,Male,4.9,83.6,5.8,High School,Yes,Yes,No,75.7,92.4,A
+616,617,Male,3.6,77.1,6.3,MissingInfo,Yes,Yes,Yes,77.1,86.4,B
+617,618,Female,2.5,81.9,9.1,High School,Yes,No,No,38.2,79.1,C
+618,619,Male,4.5,66.1,7.5,Masters,Yes,No,No,86.4,91.5,A
+619,620,Male,4.1,87.1,5.2,Bachelors,Yes,Yes,No,61.1,80.3,B
+620,621,Female,4.8,85.0,7.4,PhD,Yes,Yes,No,78.2,98.3,A
+621,622,Female,4.5,76.8,4.9,Bachelors,No,No,No,78.9,79.3,C
+622,623,Male,5.1,91.6,8.1,Bachelors,Yes,Yes,No,59.5,89.5,B
+623,624,Female,2.7,94.4,6.2,High School,Yes,Yes,Yes,77.9,75.7,C
+624,625,Male,5.5,68.9,6.7,High School,Yes,Yes,Yes,65.4,89.6,B
+625,626,Female,3.8,77.4,8.4,MissingInfo,Yes,Yes,Yes,45.1,71.0,C
+626,627,Male,6.6,77.3,5.3,High School,No,Yes,No,84.0,96.8,A
+627,628,Female,2.5,75.6,5.1,Bachelors,Yes,No,Yes,60.7,61.9,D
+628,629,Male,6.1,93.3,6.1,Masters,Yes,No,Yes,59.7,93.9,A
+629,630,Male,3.8,83.1,8.0,High School,Yes,Yes,No,65.2,81.3,B
+630,631,Male,2.5,82.4,5.0,MissingInfo,Yes,No,No,73.3,77.6,C
+631,632,Female,2.8,65.0,3.4,Masters,No,Yes,No,69.3,71.4,C
+632,633,Male,3.0,91.4,6.3,Bachelors,Yes,Yes,Yes,76.6,89.4,B
+633,634,Male,4.1,72.6,7.5,PhD,Yes,No,Yes,53.9,74.3,C
+634,635,Female,4.3,85.6,8.2,High School,Yes,No,No,61.1,76.0,C
+635,636,Female,2.6,87.8,6.2,High School,Yes,Yes,Yes,68.6,96.3,A
+636,637,Male,3.5,98.6,6.3,Bachelors,Yes,Yes,No,92.8,100.0,A
+637,638,Male,6.7,71.9,8.2,High School,Yes,No,No,68.6,99.9,A
+638,639,Female,6.1,54.8,4.6,Masters,Yes,No,No,83.0,83.8,B
+639,640,Female,4.2,86.8,6.3,MissingInfo,No,No,Yes,70.5,79.4,C
+640,641,Female,3.6,100.0,7.0,Bachelors,Yes,Yes,No,64.2,86.0,B
+641,642,Female,3.7,97.4,7.3,High School,Yes,Yes,No,67.0,97.9,A
+642,643,Female,4.4,87.1,6.2,MissingInfo,Yes,Yes,No,68.0,90.5,A
+643,644,Male,2.0,80.1,6.8,Bachelors,No,Yes,No,77.2,70.4,C
+644,645,Female,3.1,93.1,3.8,Bachelors,Yes,No,Yes,86.5,82.9,B
+645,646,Male,1.0,75.3,6.0,Bachelors,Yes,Yes,Yes,74.3,75.5,C
+646,647,Male,4.1,89.8,7.3,MissingInfo,Yes,Yes,No,84.2,100.0,A
+647,648,Male,4.5,90.1,5.6,Bachelors,Yes,No,No,58.4,94.0,A
+648,649,Female,2.8,95.6,6.9,Masters,Yes,Yes,No,65.0,88.9,B
+649,650,Male,5.9,100.0,7.3,Masters,Yes,Yes,No,61.3,97.3,A
+650,651,Male,1.7,88.9,6.4,High School,Yes,No,No,73.8,59.5,F
+651,652,Female,1.3,79.9,7.0,Bachelors,Yes,No,No,65.7,73.3,C
+652,653,Male,3.8,84.7,5.6,Masters,Yes,No,No,78.8,88.0,B
+653,654,Male,5.1,67.3,6.6,Bachelors,No,Yes,Yes,58.8,74.8,C
+654,655,Female,6.0,78.1,7.5,Masters,No,No,No,70.5,89.9,B
+655,656,Male,2.8,80.9,7.0,MissingInfo,Yes,No,Yes,78.2,72.6,C
+656,657,Male,5.1,79.8,6.1,Bachelors,Yes,Yes,No,45.2,83.6,B
+657,658,Male,3.4,86.5,7.1,Masters,Yes,Yes,No,95.5,100.0,A
+658,659,Female,3.2,76.8,7.7,Masters,Yes,No,No,66.6,84.3,B
+659,660,Female,4.8,96.2,4.3,Masters,Yes,Yes,Yes,45.7,85.4,B
+660,661,Female,4.5,85.0,8.2,Bachelors,Yes,No,No,71.9,95.2,A
+661,662,Male,1.1,84.9,6.4,High School,Yes,Yes,Yes,70.4,69.0,D
+662,663,Male,5.7,81.7,7.3,Bachelors,Yes,Yes,No,69.0,94.2,A
+663,664,Female,5.6,86.6,8.2,Masters,Yes,Yes,Yes,81.9,99.7,A
+664,665,Male,2.6,93.3,5.2,Bachelors,Yes,No,No,79.0,85.8,B
+665,666,Male,4.1,76.3,5.9,Masters,Yes,Yes,No,73.6,91.7,A
+666,667,Female,4.2,78.4,6.5,Bachelors,Yes,Yes,No,75.4,92.2,A
+667,668,Female,3.9,82.0,5.9,Bachelors,Yes,No,No,68.7,96.3,A
+668,669,Male,2.7,71.5,8.9,High School,Yes,No,Yes,91.3,97.6,A
+669,670,Male,2.5,76.8,5.8,Masters,Yes,No,Yes,52.2,66.4,D
+670,671,Male,3.5,80.2,6.1,Bachelors,Yes,Yes,No,71.7,60.8,D
+671,672,Female,5.3,93.7,7.0,High School,No,Yes,No,70.8,99.8,A
+672,673,Female,4.3,87.6,5.4,High School,Yes,No,Yes,79.8,85.2,B
+673,674,Female,2.9,86.9,6.3,Masters,Yes,No,No,59.9,73.2,C
+674,675,Female,4.7,93.5,7.2,Bachelors,Yes,Yes,No,49.1,83.8,B
+675,676,Male,0.5,83.6,6.4,High School,No,Yes,Yes,71.9,61.3,D
+676,677,Female,5.2,88.9,6.7,MissingInfo,No,No,Yes,73.4,90.6,A
+677,678,Female,0.9,84.0,6.2,Masters,Yes,Yes,Yes,87.9,67.7,D
+678,679,Female,3.0,87.7,5.0,MissingInfo,No,No,No,54.8,63.6,D
+679,680,Female,1.8,79.2,7.2,Bachelors,Yes,Yes,No,83.9,84.1,B
+680,681,Female,1.6,60.6,8.9,Bachelors,Yes,Yes,No,98.4,86.2,B
+681,682,Male,5.2,83.7,6.8,PhD,Yes,No,No,65.5,93.9,A
+682,683,Male,2.8,99.2,7.1,Bachelors,Yes,Yes,Yes,54.5,73.9,C
+683,684,Female,4.0,94.3,7.6,Masters,No,Yes,No,65.1,79.3,C
+684,685,Male,3.4,94.7,5.3,High School,Yes,Yes,No,70.2,83.8,B
+685,686,Female,4.2,97.4,8.8,Bachelors,No,Yes,Yes,76.8,91.7,A
+686,687,Female,3.6,85.9,7.0,High School,Yes,No,No,62.9,91.7,A
+687,688,Male,1.6,87.0,8.8,High School,Yes,No,No,88.7,74.4,C
+688,689,Male,5.0,78.8,5.9,High School,Yes,No,No,56.6,81.5,B
+689,690,Female,2.8,81.8,9.0,High School,Yes,Yes,No,49.1,67.7,D
+690,691,Female,1.2,91.2,7.7,MissingInfo,Yes,Yes,Yes,83.3,71.0,C
+691,692,Female,2.9,97.0,7.5,High School,Yes,Yes,Yes,42.7,79.9,C
+692,693,Male,5.8,83.6,7.1,Masters,No,No,No,67.6,92.2,A
+693,694,Female,4.8,80.5,6.5,Masters,Yes,No,Yes,100.0,100.0,A
+694,695,Female,3.0,85.0,8.2,Bachelors,Yes,No,No,69.9,89.6,B
+695,696,Female,3.0,91.0,7.0,High School,Yes,Yes,No,56.6,77.5,C
+696,697,Male,3.0,70.6,4.4,Masters,Yes,Yes,No,69.3,72.6,C
+697,698,Female,6.6,62.0,5.5,Bachelors,No,Yes,No,69.4,97.9,A
+698,699,Female,4.1,79.5,6.6,Masters,Yes,Yes,No,71.9,85.5,B
+699,700,Male,4.1,72.8,7.2,Masters,Yes,Yes,No,77.9,92.1,A
+700,701,Female,5.0,79.9,6.7,MissingInfo,Yes,No,No,57.5,84.5,B
+701,702,Female,3.9,83.5,8.3,Bachelors,Yes,Yes,Yes,90.3,82.8,B
+702,703,Male,3.1,80.5,4.5,High School,Yes,Yes,Yes,72.9,65.4,D
+703,704,Female,3.2,99.5,7.0,Bachelors,Yes,Yes,No,78.7,89.6,B
+704,705,Male,3.4,88.3,4.6,High School,Yes,No,Yes,62.5,83.1,B
+705,706,Male,3.4,88.0,7.7,PhD,Yes,No,Yes,85.4,94.2,A
+706,707,Female,4.6,91.2,6.7,High School,Yes,No,Yes,66.9,92.9,A
+707,708,Female,3.6,73.6,7.3,High School,Yes,No,No,73.3,77.1,C
+708,709,Female,4.6,95.4,5.8,Masters,Yes,Yes,No,58.8,98.3,A
+709,710,Female,3.4,84.2,8.3,Bachelors,Yes,No,Yes,58.0,72.1,C
+710,711,Male,3.6,91.7,8.1,Bachelors,Yes,Yes,No,78.3,94.6,A
+711,712,Female,0.5,74.3,7.5,Bachelors,Yes,Yes,No,64.7,67.1,D
+712,713,Male,4.9,69.5,6.6,PhD,No,No,Yes,59.8,72.2,C
+713,714,Female,4.0,93.2,7.5,High School,Yes,No,No,62.3,95.6,A
+714,715,Female,5.0,88.8,6.0,PhD,Yes,Yes,No,78.4,91.9,A
+715,716,Female,0.5,76.0,7.8,High School,No,Yes,No,62.5,54.1,F
+716,717,Male,6.6,76.3,8.8,Masters,Yes,Yes,No,68.6,98.5,A
+717,718,Female,3.3,96.3,8.1,Masters,Yes,Yes,Yes,70.2,85.0,B
+718,719,Female,5.2,73.1,5.9,High School,Yes,Yes,No,47.0,99.1,A
+719,720,Female,1.9,100.0,7.2,Bachelors,Yes,Yes,Yes,52.3,78.2,C
+720,721,Female,4.4,76.0,5.2,High School,Yes,Yes,No,74.0,83.8,B
+721,722,Male,1.9,91.4,7.5,Masters,Yes,No,No,61.2,70.7,C
+722,723,Female,2.6,81.7,7.3,Bachelors,No,Yes,No,82.7,69.9,D
+723,724,Male,6.4,91.0,4.6,Bachelors,Yes,Yes,Yes,81.6,93.7,A
+724,725,Male,3.2,79.6,5.4,High School,Yes,Yes,No,78.6,84.9,B
+725,726,Male,3.8,83.4,6.5,High School,Yes,No,No,91.8,100.0,A
+726,727,Male,4.8,85.4,6.4,High School,Yes,Yes,No,69.0,97.5,A
+727,728,Male,4.2,75.0,5.3,High School,Yes,Yes,No,77.8,88.0,B
+728,729,Male,3.7,92.4,7.3,Bachelors,Yes,Yes,No,63.0,85.0,B
+729,730,Female,4.0,79.9,7.1,PhD,Yes,No,No,99.4,98.9,A
+730,731,Male,7.1,82.7,6.6,Masters,Yes,No,No,93.8,100.0,A
+731,732,Male,3.4,75.1,5.9,Bachelors,No,No,No,70.1,85.0,B
+732,733,Male,3.8,59.4,8.1,MissingInfo,No,No,No,74.6,74.3,C
+733,734,Female,5.1,83.1,8.8,Masters,Yes,No,No,86.3,99.6,A
+734,735,Female,5.2,100.0,6.2,MissingInfo,Yes,No,Yes,68.2,79.8,C
+735,736,Male,5.3,92.8,6.1,Bachelors,Yes,Yes,No,62.1,91.3,A
+736,737,Female,4.5,84.8,7.4,High School,No,Yes,No,80.5,95.0,A
+737,738,Male,1.8,82.4,6.4,High School,Yes,No,Yes,70.9,66.6,D
+738,739,Male,6.0,85.2,6.6,Masters,Yes,Yes,No,72.2,93.1,A
+739,740,Female,1.8,90.5,7.7,High School,Yes,Yes,No,60.0,81.8,B
+740,741,Male,4.0,73.2,4.5,High School,Yes,No,No,49.4,62.9,D
+741,742,Female,2.4,96.1,8.4,Bachelors,Yes,Yes,No,72.8,94.0,A
+742,743,Female,3.4,92.2,6.9,Bachelors,Yes,No,Yes,80.9,85.0,B
+743,744,Male,4.0,92.2,6.3,Bachelors,Yes,No,Yes,67.3,82.4,B
+744,745,Male,4.0,89.4,6.7,High School,Yes,Yes,No,87.2,89.5,B
+745,746,Female,4.1,85.2,6.8,Bachelors,Yes,No,Yes,61.6,83.3,B
+746,747,Male,5.9,91.7,4.7,Bachelors,Yes,Yes,Yes,57.3,100.0,A
+747,748,Male,4.2,90.9,8.6,MissingInfo,No,Yes,No,69.2,92.4,A
+748,749,Male,3.1,81.5,6.8,Masters,Yes,Yes,No,69.0,77.0,C
+749,750,Female,4.9,79.3,7.3,MissingInfo,No,No,No,79.2,95.1,A
+750,751,Female,5.3,86.0,7.9,Masters,Yes,No,No,60.7,88.8,B
+751,752,Male,1.7,100.0,5.6,Bachelors,Yes,Yes,Yes,86.4,93.2,A
+752,753,Female,4.4,72.6,7.4,High School,Yes,No,Yes,93.6,96.4,A
+753,754,Female,4.6,70.3,6.5,Masters,Yes,Yes,No,69.5,67.2,D
+754,755,Female,3.1,86.6,7.8,Bachelors,Yes,No,No,85.0,84.6,B
+755,756,Female,5.6,85.5,4.2,Bachelors,Yes,Yes,Yes,57.3,89.8,B
+756,757,Female,3.3,86.7,6.7,Bachelors,Yes,No,No,82.9,90.3,A
+757,758,Male,3.7,87.4,6.1,Bachelors,Yes,Yes,Yes,82.6,82.5,B
+758,759,Male,3.2,82.8,7.3,High School,Yes,Yes,No,80.4,84.5,B
+759,760,Male,3.5,99.9,7.4,Bachelors,No,Yes,Yes,69.8,72.1,C
+760,761,Female,1.9,69.0,6.0,High School,Yes,No,Yes,34.5,53.2,F
+761,762,Female,1.3,76.7,5.9,Masters,No,Yes,Yes,62.3,74.0,C
+762,763,Male,5.9,84.0,6.7,High School,Yes,No,No,62.5,96.8,A
+763,764,Female,2.2,68.6,5.7,High School,Yes,Yes,No,58.3,81.2,B
+764,765,Male,2.0,83.2,7.8,Bachelors,Yes,Yes,No,71.5,85.4,B
+765,766,Male,0.5,100.0,6.4,Masters,Yes,Yes,No,65.0,81.1,B
+766,767,Male,2.5,85.2,3.3,Bachelors,Yes,No,No,60.1,83.9,B
+767,768,Female,1.5,87.3,6.4,High School,Yes,Yes,Yes,57.3,71.2,C
+768,769,Female,6.0,72.4,5.6,Bachelors,Yes,No,No,61.4,85.5,B
+769,770,Male,5.0,78.8,4.8,High School,Yes,No,No,83.5,98.4,A
+770,771,Male,2.5,81.2,5.3,MissingInfo,Yes,No,No,62.1,82.6,B
+771,772,Male,6.9,81.8,6.9,MissingInfo,Yes,Yes,Yes,63.8,91.6,A
+772,773,Male,5.0,97.8,8.4,Bachelors,Yes,No,No,64.5,91.3,A
+773,774,Female,3.0,90.6,7.2,High School,Yes,No,Yes,74.1,84.3,B
+774,775,Female,0.5,73.9,6.1,Masters,Yes,Yes,No,75.5,74.6,C
+775,776,Male,6.9,87.5,7.3,High School,Yes,No,Yes,33.5,88.6,B
+776,777,Male,1.4,90.0,6.2,Bachelors,Yes,Yes,No,82.3,73.6,C
+777,778,Female,1.0,96.4,6.0,High School,Yes,Yes,No,87.2,95.8,A
+778,779,Female,5.0,100.0,5.4,MissingInfo,Yes,Yes,No,57.4,87.1,B
+779,780,Male,7.2,74.8,4.7,High School,Yes,Yes,No,58.3,89.9,B
+780,781,Male,5.6,76.9,6.3,Bachelors,No,Yes,No,64.6,79.1,C
+781,782,Male,4.3,72.4,7.0,Masters,Yes,Yes,No,60.9,97.6,A
+782,783,Female,4.4,82.7,6.7,Bachelors,Yes,No,No,72.7,90.3,A
+783,784,Female,4.8,89.7,6.3,High School,Yes,Yes,No,46.6,78.1,C
+784,785,Female,4.6,94.9,5.7,MissingInfo,Yes,Yes,No,56.6,92.6,A
+785,786,Male,3.9,84.2,7.5,Bachelors,Yes,Yes,Yes,88.5,97.0,A
+786,787,Male,3.7,81.8,5.2,Bachelors,Yes,No,No,58.9,77.0,C
+787,788,Female,3.4,86.5,7.7,High School,Yes,No,No,84.9,96.8,A
+788,789,Female,2.4,76.6,5.6,Bachelors,Yes,No,No,74.3,72.1,C
+789,790,Male,3.1,100.0,5.9,Bachelors,Yes,No,No,48.3,75.4,C
+790,791,Female,1.0,68.9,5.0,High School,Yes,Yes,No,77.6,57.6,F
+791,792,Female,3.4,86.8,6.2,High School,No,No,Yes,68.6,67.6,D
+792,793,Male,2.0,100.0,8.0,Masters,Yes,Yes,Yes,64.5,91.2,A
+793,794,Female,1.8,85.1,7.4,High School,Yes,Yes,Yes,72.9,86.8,B
+794,795,Male,3.8,83.1,8.0,High School,Yes,No,No,75.7,89.5,B
+795,796,Male,5.6,81.4,7.4,Bachelors,Yes,Yes,No,78.5,100.0,A
+796,797,Male,4.9,83.2,5.5,Masters,Yes,No,No,84.1,93.4,A
+797,798,Male,1.1,98.7,6.4,High School,Yes,No,No,74.9,78.7,C
+798,799,Male,2.0,62.9,5.9,Bachelors,Yes,Yes,Yes,53.5,60.8,D
+799,800,Male,4.9,100.0,8.4,High School,Yes,Yes,No,64.3,96.1,A
+800,801,Male,2.0,70.8,5.4,High School,Yes,Yes,No,100.0,83.0,B
+801,802,Female,3.2,82.3,7.9,High School,Yes,No,No,78.7,94.0,A
+802,803,Male,4.3,80.7,7.9,Masters,Yes,No,No,98.4,100.0,A
+803,804,Male,2.0,90.9,9.0,High School,Yes,Yes,No,86.7,94.6,A
+804,805,Female,3.7,69.0,6.3,High School,Yes,Yes,No,72.9,87.7,B
+805,806,Female,1.5,89.6,7.7,Bachelors,Yes,No,No,73.6,82.1,B
+806,807,Female,2.6,100.0,9.5,Masters,Yes,No,Yes,69.6,80.1,B
+807,808,Male,4.0,71.4,6.1,High School,No,Yes,Yes,49.1,57.8,F
+808,809,Female,1.1,86.9,5.0,Bachelors,Yes,Yes,No,70.2,74.3,C
+809,810,Male,4.2,78.4,4.5,High School,No,No,No,84.5,82.5,B
+810,811,Male,3.5,89.3,7.7,Bachelors,Yes,Yes,No,62.8,85.9,B
+811,812,Male,4.3,85.2,4.5,Bachelors,Yes,Yes,No,74.9,88.4,B
+812,813,Male,3.8,78.6,6.4,Bachelors,Yes,No,No,80.2,100.0,A
+813,814,Female,5.5,89.9,7.3,High School,No,No,Yes,59.1,75.6,C
+814,815,Female,3.7,100.0,7.0,High School,Yes,Yes,No,64.6,78.0,C
+815,816,Male,2.9,83.1,7.3,High School,Yes,Yes,No,57.8,80.0,B
+816,817,Male,3.7,92.2,7.1,Bachelors,Yes,Yes,Yes,60.1,80.2,B
+817,818,Male,4.3,72.1,8.3,High School,Yes,Yes,No,54.5,82.2,B
+818,819,Female,3.6,75.4,5.7,Masters,Yes,No,No,59.2,79.6,C
+819,820,Male,3.6,89.7,6.0,MissingInfo,No,Yes,No,87.0,96.3,A
+820,821,Male,2.4,99.8,5.9,MissingInfo,No,No,No,59.0,65.4,D
+821,822,Female,2.5,88.6,7.8,PhD,Yes,No,No,71.5,79.9,C
+822,823,Female,1.4,81.9,7.9,Bachelors,No,Yes,No,64.0,71.6,C
+823,824,Male,6.1,85.0,7.3,Masters,Yes,Yes,No,84.1,100.0,A
+824,825,Female,1.6,72.5,8.2,High School,Yes,Yes,No,85.7,93.9,A
+825,826,Female,2.5,91.0,5.4,Bachelors,Yes,No,Yes,80.4,87.5,B
+826,827,Male,2.4,93.8,8.8,Bachelors,Yes,No,No,73.7,86.3,B
+827,828,Female,4.8,80.5,8.6,Bachelors,No,Yes,Yes,67.2,77.6,C
+828,829,Male,3.1,80.3,7.7,Masters,Yes,No,Yes,55.7,70.2,C
+829,830,Female,5.4,87.7,8.9,High School,Yes,No,No,93.3,100.0,A
+830,831,Male,2.5,80.6,4.8,High School,Yes,No,Yes,60.9,73.5,C
+831,832,Male,3.9,84.3,6.2,MissingInfo,Yes,Yes,No,78.0,91.2,A
+832,833,Male,2.2,100.0,5.9,High School,Yes,Yes,Yes,82.7,78.1,C
+833,834,Female,6.7,82.5,7.7,Bachelors,No,No,No,63.3,89.0,B
+834,835,Male,1.7,81.4,5.5,MissingInfo,Yes,Yes,Yes,82.5,82.0,B
+835,836,Female,4.0,78.5,7.7,Bachelors,Yes,Yes,Yes,79.2,89.5,B
+836,837,Male,4.5,92.4,8.4,Bachelors,Yes,Yes,Yes,90.7,100.0,A
+837,838,Male,4.1,83.2,7.6,High School,Yes,Yes,No,64.4,88.7,B
+838,839,Female,3.2,78.5,7.1,High School,Yes,Yes,No,54.6,86.0,B
+839,840,Male,3.3,98.2,5.6,PhD,Yes,No,Yes,63.9,82.9,B
+840,841,Male,3.6,99.2,5.8,Bachelors,Yes,Yes,No,72.5,88.6,B
+841,842,Female,3.3,79.0,8.3,Bachelors,Yes,Yes,No,70.7,79.2,C
+842,843,Male,4.9,66.3,7.7,High School,Yes,No,No,65.3,85.1,B
+843,844,Male,6.8,95.1,6.8,High School,Yes,Yes,No,47.1,80.2,B
+844,845,Male,2.7,78.2,6.3,MissingInfo,Yes,Yes,No,75.6,80.2,B
+845,846,Male,1.4,92.9,4.4,Bachelors,Yes,No,Yes,93.7,80.3,B
+846,847,Female,3.4,65.3,5.5,Bachelors,Yes,No,No,75.6,69.8,D
+847,848,Female,7.4,93.9,9.1,High School,No,No,No,77.3,100.0,A
+848,849,Male,2.3,72.9,5.3,Masters,Yes,No,No,76.9,80.8,B
+849,850,Female,6.0,92.3,7.0,MissingInfo,Yes,Yes,Yes,74.8,100.0,A
+850,851,Male,6.0,85.1,8.0,Bachelors,Yes,No,Yes,81.2,99.5,A
+851,852,Female,2.7,75.5,5.3,High School,Yes,Yes,No,74.7,80.7,B
+852,853,Male,4.4,80.9,7.0,Bachelors,Yes,No,No,66.2,86.6,B
+853,854,Male,5.9,91.9,7.9,Masters,No,Yes,No,60.4,98.8,A
+854,855,Male,2.9,86.1,6.8,Bachelors,Yes,No,No,67.0,81.9,B
+855,856,Male,3.2,90.8,10.0,PhD,Yes,No,Yes,73.8,79.0,C
+856,857,Male,2.6,100.0,4.8,Bachelors,Yes,No,No,66.2,91.7,A
+857,858,Male,2.0,69.4,8.1,PhD,Yes,Yes,No,73.8,78.8,C
+858,859,Female,2.5,100.0,6.6,Bachelors,Yes,Yes,No,75.3,84.8,B
+859,860,Male,1.7,86.0,7.7,High School,No,No,Yes,80.0,66.5,D
+860,861,Female,3.6,76.0,7.3,High School,Yes,No,No,85.4,91.1,A
+861,862,Male,2.3,71.7,5.9,High School,Yes,Yes,No,70.9,74.2,C
+862,863,Female,3.9,83.1,7.1,MissingInfo,Yes,No,Yes,54.3,86.3,B
+863,864,Female,1.2,94.2,4.6,Masters,Yes,No,No,65.9,71.2,C
+864,865,Female,4.0,83.7,7.5,Masters,Yes,Yes,No,70.5,83.5,B
+865,866,Male,4.8,100.0,7.2,High School,Yes,No,Yes,48.0,89.8,B
+866,867,Male,0.5,70.5,7.6,High School,Yes,Yes,No,86.7,80.3,B
+867,868,Female,4.1,84.9,8.1,Masters,Yes,Yes,No,71.7,91.6,A
+868,869,Male,5.3,72.5,7.2,Bachelors,Yes,Yes,No,74.6,95.8,A
+869,870,Female,1.7,88.6,7.0,High School,Yes,No,No,86.4,84.4,B
+870,871,Male,6.0,93.9,5.7,Bachelors,Yes,No,No,62.4,96.1,A
+871,872,Female,4.1,80.8,5.9,High School,Yes,Yes,Yes,76.9,92.6,A
+872,873,Female,2.4,59.0,8.2,High School,Yes,No,No,68.7,75.5,C
+873,874,Male,3.4,87.0,8.5,Bachelors,Yes,No,No,67.8,85.1,B
+874,875,Female,4.3,89.4,6.5,High School,Yes,No,No,60.7,93.8,A
+875,876,Male,3.6,89.0,6.9,MissingInfo,Yes,Yes,No,90.0,81.4,B
+876,877,Female,4.3,97.4,5.7,High School,Yes,No,Yes,65.5,98.8,A
+877,878,Female,2.1,74.3,8.2,High School,No,Yes,No,78.4,65.4,D
+878,879,Male,3.8,91.8,7.6,High School,Yes,Yes,No,47.5,77.6,C
+879,880,Male,1.4,96.9,9.1,Masters,Yes,Yes,Yes,84.2,85.6,B
+880,881,Male,3.3,67.2,5.7,Bachelors,Yes,Yes,No,82.6,81.4,B
+881,882,Female,2.1,88.2,6.3,Bachelors,Yes,No,No,71.2,85.4,B
+882,883,Male,2.4,80.0,7.1,High School,Yes,Yes,No,67.3,71.9,C
+883,884,Female,5.4,84.2,7.6,High School,Yes,No,Yes,74.8,94.4,A
+884,885,Female,5.1,88.5,6.5,Bachelors,Yes,Yes,No,97.5,100.0,A
+885,886,Male,4.4,80.1,5.8,Masters,Yes,Yes,Yes,48.8,77.1,C
+886,887,Male,1.9,78.2,7.9,PhD,Yes,No,Yes,79.4,76.8,C
+887,888,Female,3.0,85.3,7.7,High School,Yes,No,No,59.1,79.8,C
+888,889,Female,5.3,74.1,5.7,Bachelors,Yes,Yes,Yes,69.8,82.2,B
+889,890,Male,3.7,74.1,8.4,MissingInfo,Yes,Yes,Yes,67.0,77.4,C
+890,891,Male,7.0,91.8,8.2,Bachelors,Yes,Yes,Yes,64.9,100.0,A
+891,892,Male,4.1,73.5,7.0,Masters,Yes,Yes,Yes,69.9,87.2,B
+892,893,Male,3.8,91.7,6.9,High School,Yes,No,Yes,56.4,76.4,C
+893,894,Male,3.0,89.6,7.5,MissingInfo,No,No,No,82.4,79.6,C
+894,895,Female,3.7,67.7,5.8,Masters,Yes,Yes,Yes,48.5,71.4,C
+895,896,Female,3.3,78.2,6.8,MissingInfo,Yes,No,Yes,76.5,80.8,B
+896,897,Female,4.6,96.9,4.2,Masters,Yes,No,Yes,66.1,91.1,A
+897,898,Female,4.9,75.2,7.9,Bachelors,Yes,Yes,No,55.9,78.8,C
+898,899,Male,2.3,80.4,4.9,MissingInfo,Yes,Yes,No,72.4,66.7,D
+899,900,Male,1.5,89.6,8.6,High School,Yes,No,No,51.3,68.8,D
+900,901,Male,0.7,92.8,6.4,High School,Yes,No,No,70.5,69.9,D
+901,902,Female,4.3,82.5,6.5,Masters,Yes,Yes,No,52.9,80.7,B
+902,903,Female,1.8,79.0,6.0,Masters,Yes,Yes,No,75.5,73.3,C
+903,904,Male,0.5,99.2,6.5,MissingInfo,No,Yes,Yes,58.9,68.8,D
+904,905,Male,4.1,100.0,8.5,High School,Yes,No,No,64.6,90.8,A
+905,906,Female,7.2,94.8,3.8,Masters,Yes,Yes,No,73.5,100.0,A
+906,907,Female,3.5,85.9,8.3,Masters,Yes,Yes,No,60.7,85.0,B
+907,908,Male,4.8,76.9,7.2,High School,Yes,No,Yes,69.3,86.0,B
+908,909,Male,3.6,76.7,5.4,Bachelors,Yes,No,No,51.8,73.1,C
+909,910,Female,3.4,90.2,5.5,High School,Yes,No,Yes,77.6,87.6,B
+910,911,Male,4.9,89.2,8.8,High School,Yes,Yes,Yes,91.2,96.5,A
+911,912,Male,3.1,99.0,5.7,MissingInfo,Yes,Yes,No,100.0,100.0,A
+912,913,Male,3.9,91.5,5.4,Bachelors,No,Yes,No,71.1,82.1,B
+913,914,Female,4.0,70.0,8.2,Masters,Yes,Yes,No,79.5,80.3,B
+914,915,Female,2.5,95.5,7.2,MissingInfo,Yes,No,No,48.6,76.9,C
+915,916,Female,5.0,75.0,5.7,Bachelors,No,Yes,Yes,88.0,81.7,B
+916,917,Female,3.2,81.2,7.1,Masters,Yes,Yes,Yes,79.3,88.1,B
+917,918,Female,2.4,87.5,5.6,Bachelors,Yes,Yes,Yes,64.2,88.1,B
+918,919,Female,4.3,100.0,8.1,PhD,Yes,Yes,No,84.8,97.3,A
+919,920,Female,2.2,100.0,8.1,High School,Yes,No,Yes,66.9,83.4,B
+920,921,Male,3.5,91.1,7.4,MissingInfo,Yes,Yes,Yes,64.5,72.8,C
+921,922,Male,3.5,83.2,7.2,High School,Yes,Yes,No,75.7,90.5,A
+922,923,Male,5.1,90.3,8.9,High School,Yes,Yes,Yes,57.2,83.8,B
+923,924,Male,4.2,93.9,6.8,Masters,Yes,Yes,No,82.3,93.1,A
+924,925,Male,3.5,81.8,5.4,Bachelors,Yes,Yes,No,57.3,71.2,C
+925,926,Male,4.7,100.0,7.3,Bachelors,Yes,No,No,57.4,95.3,A
+926,927,Male,5.6,87.3,9.3,Bachelors,Yes,No,No,59.1,99.6,A
+927,928,Female,4.3,90.0,5.6,Masters,Yes,No,No,79.1,92.4,A
+928,929,Female,3.5,91.7,6.4,High School,Yes,No,Yes,62.6,75.4,C
+929,930,Male,1.5,89.2,7.3,High School,Yes,No,No,53.8,80.8,B
+930,931,Male,1.9,93.4,6.7,High School,Yes,No,No,62.7,72.9,C
+931,932,Female,3.0,78.8,5.6,Bachelors,Yes,Yes,Yes,69.6,63.7,D
+932,933,Male,2.6,79.4,8.1,High School,Yes,Yes,Yes,55.8,75.3,C
+933,934,Male,3.2,74.0,9.6,Bachelors,Yes,Yes,No,56.2,71.7,C
+934,935,Female,3.6,89.4,7.0,Bachelors,Yes,No,No,95.3,100.0,A
+935,936,Male,4.3,92.8,5.7,High School,Yes,No,No,59.7,83.3,B
+936,937,Female,3.4,89.6,4.9,Bachelors,Yes,No,No,66.1,85.6,B
+937,938,Male,4.2,100.0,7.1,PhD,No,Yes,Yes,65.6,93.1,A
+938,939,Female,3.6,84.9,8.1,High School,Yes,No,No,64.9,77.3,C
+939,940,Female,0.5,91.7,7.4,Bachelors,Yes,Yes,No,77.5,74.8,C
+940,941,Female,2.1,74.1,6.8,Masters,Yes,Yes,Yes,81.4,76.7,C
+941,942,Male,3.3,81.1,6.1,Bachelors,No,Yes,No,66.3,85.3,B
+942,943,Female,1.7,92.0,5.5,Masters,Yes,Yes,No,55.2,68.6,D
+943,944,Male,4.4,93.5,7.8,Bachelors,Yes,Yes,No,85.3,96.4,A
+944,945,Male,5.8,82.1,7.9,Bachelors,Yes,Yes,Yes,68.9,95.7,A
+945,946,Male,5.3,84.3,4.9,High School,Yes,Yes,No,90.8,96.1,A
+946,947,Male,3.2,69.8,8.7,Masters,Yes,No,No,43.1,70.4,C
+947,948,Female,5.7,81.4,7.5,Masters,Yes,No,No,72.3,85.8,B
+948,949,Female,3.7,93.9,8.5,High School,No,No,No,93.0,100.0,A
+949,950,Male,3.0,90.8,5.2,Bachelors,No,Yes,Yes,65.8,65.8,D
+950,951,Male,2.6,90.0,5.2,MissingInfo,No,No,No,67.3,72.4,C
+951,952,Female,3.0,85.5,6.6,Bachelors,Yes,No,No,73.5,83.6,B
+952,953,Male,2.9,85.1,7.4,Bachelors,Yes,Yes,Yes,63.3,89.5,B
+953,954,Female,3.8,78.4,9.0,MissingInfo,Yes,Yes,No,66.3,77.9,C
+954,955,Male,3.7,92.0,7.6,Masters,Yes,Yes,No,65.9,100.0,A
+955,956,Male,3.5,89.2,6.5,Bachelors,Yes,Yes,No,62.5,88.3,B
+956,957,Female,4.2,89.9,5.6,Masters,Yes,No,Yes,84.7,93.5,A
+957,958,Male,5.3,79.7,8.3,PhD,Yes,No,No,75.5,89.0,B
+958,959,Female,4.9,63.5,5.6,Bachelors,Yes,Yes,No,73.0,87.6,B
+959,960,Male,1.3,96.0,8.8,Bachelors,Yes,No,No,79.7,80.5,B
+960,961,Male,0.5,80.2,6.5,Bachelors,Yes,No,No,66.8,75.4,C
+961,962,Male,4.9,76.4,8.7,MissingInfo,Yes,No,No,60.7,80.7,B
+962,963,Female,1.4,91.9,7.6,Masters,Yes,Yes,Yes,62.8,73.0,C
+963,964,Male,3.2,81.1,6.6,High School,Yes,No,No,70.0,78.4,C
+964,965,Male,1.7,95.6,6.2,PhD,Yes,Yes,No,57.3,69.5,D
+965,966,Male,0.8,91.2,6.4,Bachelors,Yes,No,No,64.0,76.2,C
+966,967,Male,4.3,91.8,7.3,High School,Yes,Yes,Yes,63.8,90.0,A
+967,968,Female,4.6,71.3,6.9,Bachelors,Yes,Yes,No,95.5,100.0,A
+968,969,Female,2.6,97.1,6.1,Bachelors,Yes,No,No,36.7,60.0,D
+969,970,Male,0.5,87.6,6.6,PhD,Yes,Yes,No,67.8,78.3,C
+970,971,Female,2.7,81.3,6.9,High School,Yes,Yes,Yes,90.7,100.0,A
+971,972,Male,4.1,86.4,4.2,Masters,No,Yes,Yes,71.5,75.6,C
+972,973,Male,1.3,67.2,7.3,Bachelors,Yes,No,No,79.0,84.1,B
+973,974,Male,3.8,89.1,5.6,High School,No,Yes,Yes,71.2,77.9,C
+974,975,Female,3.5,74.7,5.4,MissingInfo,Yes,No,No,62.0,67.9,D
+975,976,Female,4.4,71.5,4.8,Bachelors,Yes,Yes,Yes,43.1,67.0,D
+976,977,Female,3.7,69.8,4.6,High School,No,Yes,No,72.5,80.9,B
+977,978,Female,2.0,96.1,5.2,Bachelors,Yes,Yes,No,60.7,72.1,C
+978,979,Female,5.3,78.7,5.9,PhD,Yes,Yes,No,60.4,83.0,B
+979,980,Female,3.3,100.0,9.1,High School,Yes,Yes,No,64.0,93.9,A
+980,981,Female,3.5,79.6,6.2,High School,Yes,Yes,No,90.9,91.4,A
+981,982,Female,2.1,67.9,7.0,High School,No,No,Yes,98.9,79.7,C
+982,983,Female,2.8,73.8,7.3,High School,Yes,No,Yes,72.6,77.7,C
+983,984,Male,2.2,97.4,7.0,Masters,Yes,Yes,No,64.4,85.0,B
+984,985,Female,3.2,83.4,6.7,Bachelors,Yes,Yes,No,55.9,75.4,C
+985,986,Female,6.1,79.5,5.4,High School,Yes,No,No,75.6,96.4,A
+986,987,Female,1.4,86.6,8.5,High School,Yes,Yes,No,91.4,81.8,B
+987,988,Female,1.1,90.0,9.0,High School,Yes,Yes,No,67.0,85.8,B
+988,989,Female,5.7,96.2,4.8,MissingInfo,Yes,No,No,41.5,80.9,B
+989,990,Female,3.2,99.5,5.6,High School,Yes,No,Yes,78.0,93.9,A
+990,991,Female,2.5,81.4,6.5,MissingInfo,Yes,No,No,81.8,81.9,B
+991,992,Female,5.1,71.7,5.6,Bachelors,Yes,Yes,No,51.0,80.4,B
+992,993,Female,2.6,80.9,7.4,High School,Yes,Yes,No,72.1,78.8,C
+993,994,Female,6.2,87.6,5.9,PhD,Yes,No,No,75.4,92.7,A
+994,995,Female,4.5,75.4,9.4,Bachelors,Yes,Yes,No,69.1,79.1,C
+995,996,Male,2.8,75.4,8.2,Masters,Yes,Yes,No,60.5,70.7,C
+996,997,Male,6.7,88.4,7.1,MissingInfo,No,Yes,No,82.2,99.5,A
+997,998,Female,2.6,84.5,8.0,High School,Yes,Yes,Yes,65.2,79.2,C
+998,999,Female,4.6,85.3,8.1,High School,No,No,Yes,52.2,82.2,B
+999,1000,Male,3.9,77.4,6.1,Masters,Yes,No,No,45.4,70.4,C
