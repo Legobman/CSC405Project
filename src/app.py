@@ -36,9 +36,18 @@ numeric_columns = [
 # the numeric variables minus the final exam score
 nColumns = [
     "study_time_hours",
-        "attendance_percent",
-        "sleep_hours",
-        "previous_grade"
+    "attendance_percent",
+    "sleep_hours",
+    "previous_grade"
+]
+
+# the categorical variables minus the final grade letter
+cColumns = [
+    "gender",
+    "parental_education",
+    "internet_access",
+    "extracurricular_activities",
+    "part_time_job"
 ]
 
 # make a copy of the original database to clean
@@ -55,6 +64,9 @@ missing_before = df.isnull().sum()
 
 # handle the missing data we found from previous tests
 df["parental_education"] = df["parental_education"].fillna("MissingInfo")
+
+# fetch missing values
+missing_after = df.isnull().sum()
 
 # check for duplicates
 duplicate_rows = df.duplicated().sum()
@@ -81,7 +93,7 @@ for column in numeric_columns:
     q3 = df[column].quantile(0.75)
     iqr = q3 - q1
     lower = q1 - 1.5 * iqr
-    upper = q3 - 1.5 * iqr
+    upper = q3 + 1.5 * iqr
     outliers = df[(df[column] < lower) | (df[column] > upper)]
     outliers_results[column] = {
         "Q1": q1,
@@ -140,8 +152,65 @@ if section == "1. Dataset Overview":
 
     st.dataframe(attribute_info, hide_index=True)
 
+# 2. Exploratory Analysis
+elif section == "2. Exploratory Analysis":
+    st.title("Exploratory Analysis")
 
+    # data that was missing
+    st.header("Missing Data")
+    missing_summary = pd.DataFrame({
+        "Before cleaning": missing_before,
+        "After cleaning": missing_after
+    })
+    st.dataframe(missing_summary, hide_index=False)
+    st.write("""There are missing values in the paraental eduction attribue. 
+                Due to the nature of categorical variables, I choose to replace
+                these values with 'MissingInfo' instant of throwing them away.""")
 
+    # data that was are outliers
+    st.header("Outliers")
+    # grab the outliers from the dictionary and display them
+    for column, results in outliers_results.items():
+        st.write(f"**{column.replace('_', ' ').title()}**")
+        st.write(f"Outlier count: {results['Count']}; Outlier values: {results['Values']}")
+        st.write(f"")
+        st.write(f"Lower Bound: {results['Lower Bound']:.2f}; Upper Bound: {results['Upper Bound']:.2f}")
+        st.write(f"")
+    st.write("""I have decided that I won't throw away any of these outliers. While a study time of 7.4 or 8.1, it isn't impossible.
+                None of the attendance percentage outliers seems so low as to be unreason to be genuine. While close to 3 hours of
+                sleep seems extreme, again, it isn't unheard of.""")
+    
+    # use of descriptive Statistics
+    st.header("Descriptive Statistics")
 
+    # quantitative analysis/group-by and aggregation
+    st.subheader("Quantitative Analysis")
+    # the group-by analysis and aggregation
+    st.subheader("FInal Exam Scores by Quantitative Variable Groups")
 
- 
+    for column in nColumns:
+        groups = pd.qcut(df[column], q=4, duplicates="drop")
+        summary = df.groupby(groups, observed=True)["final_exam_score"].agg(["count", "mean", "median", "std"])
+        st.write(f"Final Exam Scores by {column.replace('_', ' ').title()}")
+        st.dataframe(summary.style.format({"count": "{:.0f}", "mean": "{:.4f}", "median": "{:.4f}" , "std": "{:.4f}"}))
+    
+    # categorical analysis/group-by and aggregation
+    st.subheader("Categorical Analysis")
+    for column in cColumns:
+        summary = df.groupby(column, observed=True)["final_exam_score"].agg(["count", "mean", "median", "std"])
+        st.write(f"Final Exam Scores by {column.replace('_', ' ').title()}")
+        st.dataframe(summary.style.format({"count": "{:.0f}", "mean": "{:.4f}", "median": "{:.4f}" , "std": "{:.4f}"}))
+        
+    # the descriptive statistics for the numerical attributes
+    st.subheader("Numerical Variables")
+    descriptive_stats = df[numeric_columns].describe().T
+    descriptive_stats["Median"] = df[numeric_columns].median()
+    descriptive_stats["Skewness"] = df[numeric_columns].skew()
+    st.dataframe(descriptive_stats)
+
+    # the descriptive statistics for the categorical attributes
+    st.subheader("Categorical Variables")
+    for column in categorical_columns:
+        st.write(f"{column.replace('_', ' ').title()}")
+        st.dataframe(df[column].value_counts(dropna=False).rename_axis("Category").reset_index(name="Count"),
+                     hide_index=True)
