@@ -114,7 +114,7 @@ df.to_csv(data_dir / "student_performance_dataset_cleaned.csv", index=False)
 navigation_options =[
     "1. Dataset Overview",
     "2. Exploratory Analysis",
-    "3. statistical Analysis",
+    "3. Statistical Analysis & Hypothesis Testing",
     "4. Machine Learning Results",
     "5. Visualizations",
     "6. AI-Assisted Analysis",
