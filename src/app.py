@@ -115,8 +115,8 @@ navigation_options =[
     "1. Dataset Overview",
     "2. Exploratory Analysis",
     "3. Statistical Analysis & Hypothesis Testing",
-    "4. Visualizations",
-    "5. Machine Learning Results",
+    "4. Machine Learning Results",
+    "5. Visualizations",
     "6. Final Conclusion",
     "7. AI-Assisted Analysis"
 ]
@@ -294,4 +294,6 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
         else:
             st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant monotonic relationship.")
 
-# 
+# 5. Visualizations
+elif section == "5. Visualizations":
+    st.title("Visualizations")
