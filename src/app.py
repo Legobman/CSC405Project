@@ -124,8 +124,7 @@ navigation_options =[
 # sidebar navigation body
 section = st.sidebar.radio(
     "choose a report section",
-    navigation_options,
-    label_visibility="collapsed"
+    navigation_options
 )
 
 # 1. Dataset Overview
