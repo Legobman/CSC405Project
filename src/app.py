@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 from pathlib import Path
-from scipy.stats import pearsonr, spearmanr, linregress
+from scipy.stats import pearsonr, spearmanr, linregress, ttest_ind, f_oneway
 
 # locat the project directories
 project_dir = Path(__file__).resolve().parent.parent
@@ -213,3 +213,83 @@ elif section == "2. Exploratory Analysis":
         st.write(f"{column.replace('_', ' ').title()}")
         st.dataframe(df[column].value_counts(dropna=False).rename_axis("Category").reset_index(name="Count"),
                      hide_index=True)
+# 2. Statistical Analysis & Hypothesis Testing
+elif section == "3. Statistical Analysis & Hypothesis Testing":
+    st.title("Statistical Analysis & Hypothesis Testing")
+    st.write("For all tests, I used an alpha of 0.05")
+
+    # t-tests
+    st.header("Independent Samples T-Tests")
+
+    # get the variables that have only two values
+    ttest_variables = [
+        "gender",
+        "internet_access",
+        "extracurricular_activities",
+        "part_time_job"
+    ]
+    for column in ttest_variables:
+        # fetch the related final exam scores, get the names of the groups, separate them, and perform the t-test
+        groups = df.groupby(column)["final_exam_score"].apply(list)
+        group = groups.index.tolist()
+        group1, group2 = groups.iloc[0], groups.iloc[1]
+        statistic, p_value  = ttest_ind(group1, group2, equal_var=False)
+
+        # display the info about the t-test
+        st.subheader(f"Exam Scores by {column. replace('_', ' ').title()}")
+        st.write(f"**Null Hypothesis**: the mean exam scores are euqal between {group[0]} and {group[1]}")
+        st.write(f"**Alternate Hypothesis**: the mean exam scores are different between {group[0]} and {group[1]}")
+        st.write("**Reasoning**: This is the most appropriate test when one is comparing the means of two different values.")
+        st.write(f"Test Statistic: {statistic:.4f}")
+        st.write(f"P-value: {p_value:.4e}")
+        if p_value < 0.05:
+            st.write("Result: Reject the null hypothesis")
+        else:
+            st.write("Result: Fail to reject the null hypothesis")
+    # One-way ANOVA test
+    st.header("One-way ANOVA test")
+    
+    # the only categorical variable with more then two different values
+    column = "parental_education"
+    groups = df.groupby(column)["final_exam_score"].apply(list)
+    statistic, p_value  = f_oneway(*groups.tolist())
+    st.subheader("Exam Scores by Parental Education")
+    st.write("**Null Hypothesis**: the mean exam scores are euqal between the different parental education groups")
+    st.write("**Alternate Hypothesis**: the mean exam scores are different between the different parental education groups")
+    st.write("**Reasoning**: This is the most appropriate test when one is comparing the means of more then two values.")
+    st.write(f"Test Statistic: {statistic:.4f}")
+    st.write(f"P-value: {p_value:.4e}")
+    if p_value < 0.05:
+        st.write("Result: Reject the null hypothesis")
+    else:
+        st.write("Result: Fail to reject the null hypothesis")
+
+    # create the r analysis
+    st.subheader("Pearson and Spearman Correlations")
+    for column in nColumns:
+        pearson_r, pearson_p = pearsonr(df[column], df["final_exam_score"])
+        spearman_r, spearman_p = spearmanr(df[column], df["final_exam_score"])
+
+        # display the info about the correlation test
+        st.subheader(f"Exam Scores by {column. replace('_', ' ').title()}")
+        st.write(f"**Pearson Correlation**")
+        st.write(f"**Null Hypothesis**: There is no linear relationship between {column.replace('_', ' ').title()} and final exam scores")
+        st.write(f"**Alternate Hypothesis**: There is linear relationship between {column.replace('_', ' ').title()} and final exam scores")
+        st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variabels.")
+        st.write(f"Test Statistic: {pearson_r:.4f}")
+        st.write(f"P-value: {pearson_p:.4e}")
+        if pearson_p < 0.05:
+            st.write("Result: Reject the null hypothesis. There is a statistically significant linear relationship.")
+        else:
+            st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant linear relationship.")
+
+        st.write(f"**Spearman Correlation**")
+        st.write(f"**Null Hypothesis**: There is no monotonic relationship between {column.replace('_', ' ').title()} and final exam scores")
+        st.write(f"**Alternate Hypothesis**: There is monotonic relationship between {column.replace('_', ' ').title()} and final exam scores")
+        st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variabels and the relationship might not be linear.")
+        st.write(f"Test Statistic: {spearman_r:.4f}")
+        st.write(f"P-value: {spearman_p:.4e}")
+        if spearman_p < 0.05:
+            st.write("Result: Reject the null hypothesis. There is a statistically significant monotonic relationship.")
+        else:
+            st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant monotonic relationship.")
