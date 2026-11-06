@@ -115,10 +115,10 @@ navigation_options =[
     "1. Dataset Overview",
     "2. Exploratory Analysis",
     "3. Statistical Analysis & Hypothesis Testing",
-    "4. Machine Learning Results",
-    "5. Visualizations",
-    "6. AI-Assisted Analysis",
-    "7. Final Conclusion"
+    "4. Visualizations",
+    "5. Machine Learning Results",
+    "6. Final Conclusion",
+    "7. AI-Assisted Analysis"
 ]
 
 # sidebar navigation body
@@ -213,7 +213,7 @@ elif section == "2. Exploratory Analysis":
         st.write(f"{column.replace('_', ' ').title()}")
         st.dataframe(df[column].value_counts(dropna=False).rename_axis("Category").reset_index(name="Count"),
                      hide_index=True)
-# 2. Statistical Analysis & Hypothesis Testing
+# 3. Statistical Analysis & Hypothesis Testing
 elif section == "3. Statistical Analysis & Hypothesis Testing":
     st.title("Statistical Analysis & Hypothesis Testing")
     st.write("For all tests, I used an alpha of 0.05")
@@ -293,3 +293,5 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
             st.write("Result: Reject the null hypothesis. There is a statistically significant monotonic relationship.")
         else:
             st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant monotonic relationship.")
+
+# 
