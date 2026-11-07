@@ -2,6 +2,7 @@
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import seaborn as sns
 from pathlib import Path
 from scipy.stats import pearsonr, spearmanr, linregress, ttest_ind, f_oneway
 
@@ -297,3 +298,51 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
 # 5. Visualizations
 elif section == "5. Visualizations":
     st.title("Visualizations")
+    
+    st.header("Categorical Variabels and Final Exam Scores")
+    
+    # make a box plot for the categorical variables
+    for column in cColumns:
+        fig, axis = plt.subplots(figsize=(8, 5))
+        sns.boxplot(data=df, x=column, y="final_exam_score", ax=axis)
+        axis.set_xlabel(column.replace("_", " ").title())
+        axis.set_ylabel("Final Exam Score")
+        axis.set_title(f"{column.replace('_', ' ').title()} vs. Final Exam Score")
+        axis.grid(True, alpha=0.3)
+        plt.xticks(rotation=15)
+        st.pyplot(fig)
+        fig.savefig(figures_dir / f"{column}_vs_final_exam.jpg", dpi=300, bbox_inches="tight")
+        plt.close(fig)
+        medians = df.groupby(column, observed=True)["final_exam_score"].median()
+        highest = medians.idxmax()
+        lowest = medians.idxmin()
+        st.write(f"***interpretation**: {highest} has the highest median exam score of {medians.max():.2f}, while {lowest} has the lowest median exam score of {medians.min():.2f}, the boxplots also shows difference in the spread and distribution of scores between groups.")
+        
+        st.header("Numerical Variabels and Final Exam Scores")
+            
+    # make a box plot for the categorical variables
+    for column in nColumns:
+        fig, axis = plt.subplots(figsize=(8, 5))
+        sns.regplot(data=df, x=column, y="final_exam_score", ax=axis, scatter_kws={"alpha": 0.6})
+        axis.set_xlabel(column.replace("_", " ").title())
+        axis.set_ylabel("Final Exam Score")
+        axis.set_title(f"{column.replace('_', ' ').title()} vs. Final Exam Score")
+        axis.grid(True, alpha=0.3)
+        plt.xticks(rotation=15)
+        st.pyplot(fig)
+        fig.savefig(figures_dir / f"{column}_vs_final_exam.jpg", dpi=300, bbox_inches="tight")
+        plt.close(fig)
+        correlation, p_value = pearsonr(df[column], df["final_exam_score"])
+        if abs(correlation) < 0.3:
+            strength = "weak"
+        elif abs(correlation) < 0.7:
+            strength = "moderate"
+        else:
+            strength = "strong"
+        if correlation > 0:
+            direction = "positive"
+        elif correlation == 0:
+            direction = "nuetral"
+        else:
+            direction = "negative"
+        st.write(f"***interpretation**: The scatterplot shows a {strength} {direction} linear relationship betweeen {column.replace('_', ' ')} and final exam scores. (r = {correlation:.4f}, p = {p_value:.4e})")

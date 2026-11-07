@@ -14,5 +14,6 @@ Instructions for running the code:
     git clone https://github.com/Legobman/CSC405Project.git
     ```
 - OR download zip.
-- Open the project in Jupyter Notebook or VS Code.
-- Build and run the main class.
+- Open the project in VS Code.
+- install the needed dependencies.
+- enter "Streamlit run src/app.py" in the terminal to run.
