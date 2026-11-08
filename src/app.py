@@ -443,7 +443,7 @@ elif section == "5. Visualizations":
         medians = df.groupby(column, observed=True)["final_exam_score"].median()
         highest = medians.idxmax()
         lowest = medians.idxmin()
-        st.write(f"***interpretation**: {highest} has the highest median exam score of {medians.max():.2f}, while {lowest} has the lowest median exam score of {medians.min():.2f}, the boxplots also shows difference in the spread and distribution of scores between groups.")
+        st.write(f"**interpretation**: {highest} has the highest median exam score of {medians.max():.2f}, while {lowest} has the lowest median exam score of {medians.min():.2f}, the boxplots also shows difference in the spread and distribution of scores between groups.")
         
         st.header("Numerical Variabels and Final Exam Scores")
             
@@ -472,4 +472,4 @@ elif section == "5. Visualizations":
             direction = "nuetral"
         else:
             direction = "negative"
-        st.write(f"***interpretation**: The scatterplot shows a {strength} {direction} linear relationship betweeen {column.replace('_', ' ')} and final exam scores. (r = {correlation:.4f}, p = {p_value:.4e})")
+        st.write(f"**interpretation**: The scatterplot shows a {strength} {direction} linear relationship betweeen {column.replace('_', ' ')} and final exam scores. (r = {correlation:.4f}, p = {p_value:.4e})")
