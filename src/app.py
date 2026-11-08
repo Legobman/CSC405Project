@@ -284,7 +284,7 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
         st.write(f"**Pearson Correlation**")
         st.write(f"**Null Hypothesis**: There is no linear relationship between {column.replace('_', ' ').title()} and final exam scores")
         st.write(f"**Alternate Hypothesis**: There is linear relationship between {column.replace('_', ' ').title()} and final exam scores")
-        st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variabels.")
+        st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variables.")
         st.write(f"Test Statistic: {pearson_r:.4f}")
         st.write(f"P-value: {pearson_p:.4e}")
         if pearson_p < 0.05:
@@ -295,7 +295,7 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
         st.write(f"**Spearman Correlation**")
         st.write(f"**Null Hypothesis**: There is no monotonic relationship between {column.replace('_', ' ').title()} and final exam scores")
         st.write(f"**Alternate Hypothesis**: There is monotonic relationship between {column.replace('_', ' ').title()} and final exam scores")
-        st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variabels and the relationship might not be linear.")
+        st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variables and the relationship might not be linear.")
         st.write(f"Test Statistic: {spearman_r:.4f}")
         st.write(f"P-value: {spearman_p:.4e}")
         if spearman_p < 0.05:
@@ -426,7 +426,7 @@ elif section == "4. Machine Learning Results":
 elif section == "5. Visualizations":
     st.title("Visualizations")
     
-    st.header("Categorical Variabels and Final Exam Scores")
+    st.header("Categorical Variables and Final Exam Scores")
     
     # make a box plot for the categorical variables
     for column in cColumns:
@@ -445,7 +445,7 @@ elif section == "5. Visualizations":
         lowest = medians.idxmin()
         st.write(f"**interpretation**: {highest} has the highest median exam score of {medians.max():.2f}, while {lowest} has the lowest median exam score of {medians.min():.2f}, the boxplots also shows difference in the spread and distribution of scores between groups.")
         
-        st.header("Numerical Variabels and Final Exam Scores")
+        st.header("Numerical Variables and Final Exam Scores")
             
     # make a box plot for the categorical variables
     for column in nColumns:
