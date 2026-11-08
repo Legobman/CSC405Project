@@ -445,7 +445,7 @@ elif section == "5. Visualizations":
         lowest = medians.idxmin()
         st.write(f"**interpretation**: {highest} has the highest median exam score of {medians.max():.2f}, while {lowest} has the lowest median exam score of {medians.min():.2f}, the boxplots also shows difference in the spread and distribution of scores between groups.")
         
-        st.header("Numerical Variables and Final Exam Scores")
+    st.header("Numerical Variables and Final Exam Scores")
             
     # make a box plot for the categorical variables
     for column in nColumns:
