@@ -3,8 +3,16 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 from pathlib import Path
 from scipy.stats import pearsonr, spearmanr, linregress, ttest_ind, f_oneway
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
+from sklearn.compose import ColumnTransformer
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # locat the project directories
 project_dir = Path(__file__).resolve().parent.parent
@@ -294,6 +302,125 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
             st.write("Result: Reject the null hypothesis. There is a statistically significant monotonic relationship.")
         else:
             st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant monotonic relationship.")
+
+# 4. Machine Learning Results
+elif section == "4. Machine Learning Results":
+    st.title("Machine Learning Results")
+
+    # separate predictor variables and the target variable
+    x = df[nColumns + cColumns]
+    y = df["final_exam_score"]
+
+    # split the data into a 80% training / 20% testing set
+    X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+
+    st.write(f"**Training Data**: {X_train.shape[0]}")
+    st.write(f"**Testing Data**: {X_test.shape[0]}")
+    st.write(f"**Number of Obserations**: {x.shape[0]}")
+
+    # prepare the categorical variables by converting them into numbers so they can be used
+    LR_preprocessor = ColumnTransformer(transformers=[
+        ("num", StandardScaler(), nColumns),
+        ("cat", OneHotEncoder(handle_unknown="ignore"), cColumns)
+    ])
+    RF_preprocessor = ColumnTransformer(transformers=[
+        ("num", StandardScaler(), nColumns),
+        ("cat", OneHotEncoder(handle_unknown="ignore"), cColumns)
+    ])
+
+    # build and train the model pipelines
+    LR_model = Pipeline(steps=[
+        ("preprocessor", LR_preprocessor),
+        ("model", LinearRegression())
+    ])
+    RF_model = Pipeline(steps=[
+        ("preprocessor", RF_preprocessor),
+        ("model", RandomForestRegressor(n_estimators=100, random_state=1))
+    ])
+    LR_model.fit(X_train, y_train)
+    RF_model.fit(X_train, y_train)
+
+    # generate predictions with test data
+    LR_prediction = LR_model.predict(X_test)
+    RF_prediction = RF_model.predict(X_test)
+
+    # calculate the mean absolute error, root mean square error, and the r square to judge the models
+    LR_MAE = mean_absolute_error(y_test, LR_prediction)
+    LR_RMSE = np.sqrt(mean_squared_error(y_test, LR_prediction))
+    LR_R2 = r2_score(y_test, LR_prediction)
+    RF_MAE = mean_absolute_error(y_test, RF_prediction)
+    RF_RMSE = np.sqrt(mean_squared_error(y_test, RF_prediction))
+    RF_R2 = r2_score(y_test, RF_prediction)
+
+    # Display the results
+    st.subheader("Model Performance Comparison")
+    model_results = pd.DataFrame({
+        "Model": ["Linear Regression", "Random Forest"],
+        "MAE": [LR_MAE, RF_MAE],
+        "RMSE": [LR_RMSE, RF_RMSE],
+        "R^2": [LR_R2, RF_R2]
+    })
+    st.dataframe(model_results.style.format({
+            "MAE": "{:.4f}",
+            "RMSE": "{:.4f}",
+            "R^2": "{:.4f}"
+        }),
+        hide_index=True
+    )
+
+    # compare the results
+    st.subheader("Model Comparsion")
+    if LR_MAE < RF_MAE:
+        st.write("**MAE**: Linear Regression has a lower average prediction error")
+    else:
+        st.write("**MAE**: Random Forest has a lower average prediction error")
+    if LR_RMSE < RF_RMSE:
+        st.write("**RMSE**: Linear Regression has a lower average prediction error when larger are penalized")
+    else:
+        st.write("**RMSE**: Random Forest has a lower average prediction error when larger are penalized")
+    if LR_R2 > RF_R2:
+        st.write("**R^2**: Linear Regression explains more of the variation in the final exam scores")
+    else:
+        st.write("**R^2**: Random Forest explains more of the variation in the final exam scores")
+
+    # retrieve the feature names and importance scores from the random forest to examine how the model make its predictions
+    feature_names = RF_model.named_steps["preprocessor"].get_feature_names_out()
+    feature_importance = RF_model.named_steps["model"].feature_importances_
+    
+    # create a dataframe of these feature
+    importance_df = pd.DataFrame({"Feature": feature_names, "Importance": feature_importance})
+
+    # collapse the different categorical features to make it easier to compare how important the whole variable was
+    for column in cColumns:
+        compare = importance_df["Feature"].str.startswith(f"cat__{column}_")
+        importance_df.loc[compare, "importance"] = importance_df.loc[compare, "Importance"].sum()
+        importance_df.loc[compare, "Feature"] = column
+
+    # clear out old duplicate rows from before
+    importance_df = importance_df.groupby("Feature", as_index=False)["Importance"].sum()
+
+    # sort the datafram
+    importance_df = importance_df.sort_values(by="Importance", ascending=True)
+
+    # display the feature importance
+    st.subheader("Random Forest Feature Importance")
+    fig, axis = plt.subplots(figsize=(9,6))
+    axis.barh(importance_df["Feature"], importance_df["Importance"])
+    axis.set_xlabel("Importance Score")
+    axis.set_ylabel("Predictor")
+    axis.set_title("Random Forest Feature Importance")
+    fig.tight_layout()
+    st.pyplot(fig)
+    fig.savefig(figures_dir / "random_forest_feature_importance.jpg", dpi=300, bbox_inches="tight")
+    plt.close(fig)
+
+    # summarize the findings from the feature importance
+    most_important = importance_df.iloc[-1]
+    st.write(f"""**Interpretation**: The most important predictor in the Random Forest model was 
+                 {most_important['Feature']}. It has an importance score of {most_important['Importance']:.4f}.
+                 The Feature Importance measures the contribution of each predictor in terms of how much it added 
+                 to the Random Forest model's predictions with a higher scores meaning that it was more important
+                 within the model.""")
 
 # 5. Visualizations
 elif section == "5. Visualizations":
