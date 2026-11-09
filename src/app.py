@@ -473,3 +473,46 @@ elif section == "5. Visualizations":
         else:
             direction = "negative"
         st.write(f"**interpretation**: The scatterplot shows a {strength} {direction} linear relationship betweeen {column.replace('_', ' ')} and final exam scores. (r = {correlation:.4f}, p = {p_value:.4e})")
+
+# 6. Final Conclusion
+elif section == "6. Final Conclusion":
+    st.header("Final Conclusion")
+    st.write("""This project examines the relationship between students' study habits,
+                acdemic history, and personal circumstances to their final exam scores.
+                The goal was to find which factors were associated with a student's 
+                academic performance and to see how strong these associations are.""")
+    st.write("""When analysing the numerical variables for statistically significant 
+                relationship, it was found that all four had a statistically significant
+                positive relationship. Study Time Hours has the strongest relationship
+                with an r-value of 0.5675. The rest in descending order are previous 
+                grades with an r-value of 0.4063, then attendance percent with an r-value
+                of 0.2619, and lastly sleep hours with an r-value of 0.178. These results
+                that students who study longer and have already done well of the previous
+                exam generally get higher exam scores. But with how even the strongest
+                relationship in this dataset was firmly moderate, that suggests that this
+                dataset is limited.""")
+    st.write("""When analysing the categorical variables for statistically significant 
+                relationship, it was found that the only variables to have an effort are
+                internet access and part-time employment. Students with internet access
+                have a higher median final exam score than those without and those without
+                a part-time job had a higher median final exam score than those who did.
+                Genderm extracurricular activities, and parental education all failed to
+                show having a statistically significant on a student's final exam score.""")
+    st.write("""With using machine learning analysis to find deeper insight on how well
+                a student's characteristics connect to their final exam score, it was found
+                that with Linear Regression, about **62.20%** 0f the variation in the final exam
+                scores could be explained by the predictors, the characteristics. With Random
+                Forest, it was found that the top three predictors are study time hours,
+                previous grade, and attendance percentage. This echoes how findings from
+                the numerical variable analysis.""")
+    st.write("""Overall the findings suggest that how well one did in the past and how much
+                one studies, and whether or not one has access to the internet are factors
+                that are positively associated with said student's final exam performance. 
+                While part-time employment were also found to have a negative association 
+                with final exam scores. But, these finding only show associations and do not
+                show causation. Also with the dataset only being one thousand students, it is
+                too small to make any real broad claim about the student population as a whole.""")
+    st.write("""In conclusion, this project used statistical analysis and machine learning
+                together to explore the possible reasons for a student's performance
+                through their many different characteristics.""")
+    
