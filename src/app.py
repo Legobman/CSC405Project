@@ -4,6 +4,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import os
 from pathlib import Path
 from scipy.stats import pearsonr, spearmanr, linregress, ttest_ind, f_oneway
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -13,6 +14,11 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
+
+llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", api_key=os.getenv("GOOGLE_API_KEY"))
 
 # locat the project directories
 project_dir = Path(__file__).resolve().parent.parent
@@ -117,7 +123,143 @@ for column in numeric_columns:
 # save the results of the cleaning process
 df.to_csv(data_dir / "student_performance_dataset_cleaned.csv", index=False)
 
+# craft the AI prompt
+summary = f"""
+    Dataset Shape:
+    {df.shape}
 
+    Columns:
+    {df.dtypes}
+
+    Missing Values Before Cleaning:
+    {missing_before}
+
+    Missing Values After Cleaning:
+    {missing_after}
+
+    Duplicate Rows:
+    {duplicate_rows}
+
+    Invalid Values:
+    {invalid_values}
+
+    Outlier Results:
+    {outliers_results}
+
+    Descriptive Statistics:
+    {df.describe().to_string()}
+"""
+
+# moving code outside of their specific secttion to use them with the AI-assisted analysis
+# hold Statistical Analysis & Hypothesis Testing summary
+hypothesis_results = {}
+# get the variables that have only two values
+ttest_variables = [
+    "gender",
+    "internet_access",
+    "extracurricular_activities",
+    "part_time_job"
+]
+for column in ttest_variables:
+    # fetch the related final exam scores, get the names of the groups, separate them, and perform the t-test
+    groups = df.groupby(column)["final_exam_score"].apply(list)
+    group = groups.index.tolist()
+    group1, group2 = groups.iloc[0], groups.iloc[1]
+    statistic, p_value  = ttest_ind(group1, group2, equal_var=False)
+
+    hypothesis_results[column] = {
+        "Groups": group,
+        "Statistic": statistic,
+        "P-value": p_value,
+        "Result": "Reject the null hypothesis" if p_value < 0.05 else "Fail to reject the null hypothesis"
+    }
+
+# the only categorical variable with more then two different values
+column = "parental_education"
+groups = df.groupby(column)["final_exam_score"].apply(list)
+statistic, p_value  = f_oneway(*groups.tolist())
+hypothesis_results[column] = {
+    "Statistic": statistic,
+    "P-value": p_value,
+    "Result": "Reject the null hypothesis" if p_value < 0.05 else "Fail to reject the null hypothesis"
+}
+
+# create the r analysis
+correlation_results = {}
+for column in nColumns:
+    pearson_r, pearson_p = pearsonr(df[column], df["final_exam_score"])
+    spearman_r, spearman_p = spearmanr(df[column], df["final_exam_score"])
+    correlation_results[column] = {
+        "Pearson r": pearson_r,
+        "Pearson P-value": pearson_p,
+        "Pearson Result": "Reject the null hypothesis. There is a statistically significant linear relationship." if pearson_p < 0.05 else "Fail to reject the null hypothesis. There is not a statistically significant linear relationship.",
+        "Spearman r": spearman_r,
+        "Spearman P-value": spearman_p,
+        "Pearson Result": "Reject the null hypothesis. There is a statistically significant monotonic relationship." if pearson_p < 0.05 else "Fail to reject the null hypothesis. There is not a statistically significant monotonic relationship."
+    }
+
+# separate predictor variables and the target variable
+x = df[nColumns + cColumns]
+y = df["final_exam_score"]
+
+# split the data into a 80% training / 20% testing set
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+
+# prepare the categorical variables by converting them into numbers so they can be used
+LR_preprocessor = ColumnTransformer(transformers=[
+    ("num", StandardScaler(), nColumns),
+    ("cat", OneHotEncoder(handle_unknown="ignore"), cColumns)
+])
+RF_preprocessor = ColumnTransformer(transformers=[
+    ("num", StandardScaler(), nColumns),
+    ("cat", OneHotEncoder(handle_unknown="ignore"), cColumns)
+])
+
+# build and train the model pipelines
+LR_model = Pipeline(steps=[
+    ("preprocessor", LR_preprocessor),
+    ("model", LinearRegression())
+])
+RF_model = Pipeline(steps=[
+    ("preprocessor", RF_preprocessor),
+    ("model", RandomForestRegressor(n_estimators=100, random_state=1))
+])
+LR_model.fit(X_train, y_train)
+RF_model.fit(X_train, y_train)
+
+# generate predictions with test data
+LR_prediction = LR_model.predict(X_test)
+RF_prediction = RF_model.predict(X_test)
+
+# calculate the mean absolute error, root mean square error, and the r square to judge the models
+LR_MAE = mean_absolute_error(y_test, LR_prediction)
+LR_RMSE = np.sqrt(mean_squared_error(y_test, LR_prediction))
+LR_R2 = r2_score(y_test, LR_prediction)
+RF_MAE = mean_absolute_error(y_test, RF_prediction)
+RF_RMSE = np.sqrt(mean_squared_error(y_test, RF_prediction))
+RF_R2 = r2_score(y_test, RF_prediction)
+
+# store the model results
+model_results = pd.DataFrame({
+    "Model": ["Linear Regression", "Random Forest"],
+    "MAE": [LR_MAE, RF_MAE],
+    "RMSE": [LR_RMSE, RF_RMSE],
+    "R^2": [LR_R2, RF_R2]
+})
+
+# summary of the data to give the Gemini
+analysis_results = f"""
+    Statistical Analysiss Results:
+
+    Correlations:
+    {pd.DataFrame.from_dict(correlation_results, orient="index").to_string()}
+
+    Hypothesis Testing:
+    {hypothesis_results}
+
+    Machine Learning Results:
+    {model_results.to_string(index=False)}
+"""
 
 # sidebar navigation options
 navigation_options =[
@@ -230,136 +372,67 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
     # t-tests
     st.header("Independent Samples T-Tests")
 
-    # get the variables that have only two values
-    ttest_variables = [
-        "gender",
-        "internet_access",
-        "extracurricular_activities",
-        "part_time_job"
-    ]
     for column in ttest_variables:
-        # fetch the related final exam scores, get the names of the groups, separate them, and perform the t-test
-        groups = df.groupby(column)["final_exam_score"].apply(list)
-        group = groups.index.tolist()
-        group1, group2 = groups.iloc[0], groups.iloc[1]
-        statistic, p_value  = ttest_ind(group1, group2, equal_var=False)
-
+        results = hypothesis_results[column]
+        group = results["Groups"]
         # display the info about the t-test
         st.subheader(f"Exam Scores by {column. replace('_', ' ').title()}")
         st.write(f"**Null Hypothesis**: the mean exam scores are euqal between {group[0]} and {group[1]}")
         st.write(f"**Alternate Hypothesis**: the mean exam scores are different between {group[0]} and {group[1]}")
         st.write("**Reasoning**: This is the most appropriate test when one is comparing the means of two different values.")
-        st.write(f"Test Statistic: {statistic:.4f}")
-        st.write(f"P-value: {p_value:.4e}")
-        if p_value < 0.05:
-            st.write("Result: Reject the null hypothesis")
-        else:
-            st.write("Result: Fail to reject the null hypothesis")
+        st.write(f"Test Statistic: {results['Statistic']:.4f}")
+        st.write(f"P-value: {results['P_value']:.4e}")
+        st.write(f"Result: {results['Result']}")
+        
     # One-way ANOVA test
     st.header("One-way ANOVA test")
     
-    # the only categorical variable with more then two different values
-    column = "parental_education"
-    groups = df.groupby(column)["final_exam_score"].apply(list)
-    statistic, p_value  = f_oneway(*groups.tolist())
+    results = hypothesis_results["parental_education"]
     st.subheader("Exam Scores by Parental Education")
     st.write("**Null Hypothesis**: the mean exam scores are euqal between the different parental education groups")
     st.write("**Alternate Hypothesis**: the mean exam scores are different between the different parental education groups")
     st.write("**Reasoning**: This is the most appropriate test when one is comparing the means of more then two values.")
-    st.write(f"Test Statistic: {statistic:.4f}")
-    st.write(f"P-value: {p_value:.4e}")
-    if p_value < 0.05:
-        st.write("Result: Reject the null hypothesis")
-    else:
-        st.write("Result: Fail to reject the null hypothesis")
+    st.write(f"Test Statistic: {results['Statistic']:.4f}")
+    st.write(f"P-value: {results['{P-value']:.4e}")
+    st.write(f"Result: {results['Result']}")
 
-    # create the r analysis
+    
     st.subheader("Pearson and Spearman Correlations")
-    for column in nColumns:
-        pearson_r, pearson_p = pearsonr(df[column], df["final_exam_score"])
-        spearman_r, spearman_p = spearmanr(df[column], df["final_exam_score"])
-
+    
+    for column, results in correlation_results.items():
         # display the info about the correlation test
         st.subheader(f"Exam Scores by {column. replace('_', ' ').title()}")
         st.write(f"**Pearson Correlation**")
         st.write(f"**Null Hypothesis**: There is no linear relationship between {column.replace('_', ' ').title()} and final exam scores")
         st.write(f"**Alternate Hypothesis**: There is linear relationship between {column.replace('_', ' ').title()} and final exam scores")
         st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variables.")
-        st.write(f"Test Statistic: {pearson_r:.4f}")
-        st.write(f"P-value: {pearson_p:.4e}")
-        if pearson_p < 0.05:
-            st.write("Result: Reject the null hypothesis. There is a statistically significant linear relationship.")
-        else:
-            st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant linear relationship.")
+        st.write(f"Test Statistic: {results['Pearson r']:.4f}")
+        st.write(f"P-value: {results['Pearson P-value']:.4e}")
+        st.write(f"Result: {results['Pearson Result']}")
 
         st.write(f"**Spearman Correlation**")
         st.write(f"**Null Hypothesis**: There is no monotonic relationship between {column.replace('_', ' ').title()} and final exam scores")
         st.write(f"**Alternate Hypothesis**: There is monotonic relationship between {column.replace('_', ' ').title()} and final exam scores")
         st.write("**Reasoning**: This is the most appropriate test when one is comparing two different numerical variables and the relationship might not be linear.")
-        st.write(f"Test Statistic: {spearman_r:.4f}")
-        st.write(f"P-value: {spearman_p:.4e}")
-        if spearman_p < 0.05:
-            st.write("Result: Reject the null hypothesis. There is a statistically significant monotonic relationship.")
-        else:
-            st.write("Result: Fail to reject the null hypothesis. There is not a statistically significant monotonic relationship.")
+        st.write(f"Test Statistic: {results['Spearman r']:.4f}")
+        st.write(f"P-value: {results['Spearman P-value']:.4e}")
+        st.write(f"Result: {results['Spearman Result']}")
 
 # 4. Machine Learning Results
 elif section == "4. Machine Learning Results":
     st.title("Machine Learning Results")
 
-    # separate predictor variables and the target variable
-    x = df[nColumns + cColumns]
-    y = df["final_exam_score"]
-
-    # split the data into a 80% training / 20% testing set
-    X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+    
 
     st.write(f"**Training Data**: {X_train.shape[0]}")
     st.write(f"**Testing Data**: {X_test.shape[0]}")
     st.write(f"**Number of Obserations**: {x.shape[0]}")
 
-    # prepare the categorical variables by converting them into numbers so they can be used
-    LR_preprocessor = ColumnTransformer(transformers=[
-        ("num", StandardScaler(), nColumns),
-        ("cat", OneHotEncoder(handle_unknown="ignore"), cColumns)
-    ])
-    RF_preprocessor = ColumnTransformer(transformers=[
-        ("num", StandardScaler(), nColumns),
-        ("cat", OneHotEncoder(handle_unknown="ignore"), cColumns)
-    ])
-
-    # build and train the model pipelines
-    LR_model = Pipeline(steps=[
-        ("preprocessor", LR_preprocessor),
-        ("model", LinearRegression())
-    ])
-    RF_model = Pipeline(steps=[
-        ("preprocessor", RF_preprocessor),
-        ("model", RandomForestRegressor(n_estimators=100, random_state=1))
-    ])
-    LR_model.fit(X_train, y_train)
-    RF_model.fit(X_train, y_train)
-
-    # generate predictions with test data
-    LR_prediction = LR_model.predict(X_test)
-    RF_prediction = RF_model.predict(X_test)
-
-    # calculate the mean absolute error, root mean square error, and the r square to judge the models
-    LR_MAE = mean_absolute_error(y_test, LR_prediction)
-    LR_RMSE = np.sqrt(mean_squared_error(y_test, LR_prediction))
-    LR_R2 = r2_score(y_test, LR_prediction)
-    RF_MAE = mean_absolute_error(y_test, RF_prediction)
-    RF_RMSE = np.sqrt(mean_squared_error(y_test, RF_prediction))
-    RF_R2 = r2_score(y_test, RF_prediction)
+    
 
     # Display the results
     st.subheader("Model Performance Comparison")
-    model_results = pd.DataFrame({
-        "Model": ["Linear Regression", "Random Forest"],
-        "MAE": [LR_MAE, RF_MAE],
-        "RMSE": [LR_RMSE, RF_RMSE],
-        "R^2": [LR_R2, RF_R2]
-    })
+    
     st.dataframe(model_results.style.format({
             "MAE": "{:.4f}",
             "RMSE": "{:.4f}",
@@ -515,4 +588,111 @@ elif section == "6. Final Conclusion":
     st.write("""In conclusion, this project used statistical analysis and machine learning
                 together to explore the possible reasons for a student's performance
                 through their many different characteristics.""")
+
+# the section about the AI-Assisted Analysis
+elif section == "7. AI-Assisted Analysis":
+
+    # the AI judges how well I had set up the dataset
+    st.title("AI-Assisted Analysis")
+    st.write("""This section demonstrates how Google Gemini can be used to assist in the data
+    data preparation and analysis. AI genereated recommendations are evaluated before being
+    accepted or rejcted.""")
+    st.header("Data Preparation Review")
+    st.write("""Gemini was asked to eevaluate the data preparation decisions I amde during
+    data cleaning process.""")
+    prompt = f"""
+    You are a data analyst.
     
+    Review the following dataset summary:
+    
+    {summary}
+
+    Evaluate these data preparation decisions:
+    1. Missing parental education values were replaced with "MissingInfo".
+    2. Potential outliers detected using the IQR method were retained.
+    3. Duplicated records and invalid values were checked.
+
+    for each decision:
+    - Explain whether the approach is appropriate.
+    - Identify potential problems or limitations.
+    - Recommend improvements if necessary.
+
+    Do not assume that potential outliers are errors.
+    Do not suggest changes without explaining their reasoning.
+    
+    Format your response using clean Markdown.
+
+    Use:
+    - ## for each main decision
+    - ### for Appropriateness, Potential Problems, and Recommendations
+    - Bullet points for explanations
+    - Bold test for important evaluations
+
+    Do not include JSON, Python dictionaries, metadata, or other response objects.
+    Return only the formatted analysis.
+    """
+
+    if "data_prep_response" not in st.session_state:
+        st.session_state.data_prep_response = None
+
+    with st.expander("View Gemini Prompt"):
+        st.code(prompt)
+
+    if st.button("Analyze Data Preparation"):
+        with st.spinner("Gemini is analyzing the dataset..."):
+            response = llm.invoke(prompt)
+            st.session_state.data_prep_response = response.content[0].get("text", "")
+
+    if st.session_state.data_prep_response is not None:
+        st.subheader("Gemini's Response")
+        st.markdown(st.session_state.data_prep_response)
+   
+    # the ai examines my analysis
+    st.header("Statistical and Machine learning review")
+    st.write("""Gemini was also asked to evaluate the results of the statistical analysis
+    analysis and machine learning models, find what it thinks are important findings, and
+    discuss any limitations or issues with the analysis.""")
+
+    analysis_prompt = f"""
+    You are a data analyst.
+
+    Review the following statistical and machine learning results:
+
+    {analysis_results}
+
+    Evaluate the results:
+    1. Explain the important findings from the correlation analysis.
+    2. Interpret the hypothesis testing results, including which null hypotheses were rejected or not rejected
+    3. Compare the Linear Regression and Random Forest models using their evaluation metrics.
+    4. Explain which variables were most important to the Random Forest model.
+    5. Identify potential limitations or issues with these results.
+
+    Do not claim that correlation or feature importance demonstrate causation.
+    Do not make claims that are unsupported by the results.
+
+    Format your response using clean Markdown.
+    
+    Use:
+    - ## for each main decision
+    - ### for Appropriateness, Potential Problems, and Recommendations
+    - Bullet points for explanations
+    - Bold test for important evaluations
+
+    Do not include JSON, Python dictionaries, metadata, or other response objects.
+    Return only the formatted analysis.
+    """
+
+    if "analysis_response" not in st.session_state:
+        st.session_state.analysis_response = None
+
+    with st.expander("View Gemini Prompt"):
+        st.code(analysis_prompt)
+
+    if st.button("Analyze Statistical and Machine learning Results"):
+        with st.spinner("Gemini is analyzing the results..."):
+            response = llm.invoke(analysis_prompt)
+            st.session_state.analysis_response = response.content[0].get("text", "")
+
+    if st.session_state.analysis_response is not None:
+        st.subheader("Gemini's Response")
+        st.markdown(st.session_state.analysis_response)
