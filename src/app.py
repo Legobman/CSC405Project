@@ -6,7 +6,7 @@ import seaborn as sns
 import numpy as np
 import os
 from pathlib import Path
-from scipy.stats import pearsonr, spearmanr, linregress, ttest_ind, f_oneway
+from scipy.stats import pearsonr, spearmanr, ttest_ind, f_oneway
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
@@ -15,6 +15,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from langchain_google_genai import ChatGoogleGenerativeAI
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Image
+from reportlab.lib.units import inch
 
 llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -244,6 +248,7 @@ model_results = pd.DataFrame({
     "RMSE": [LR_RMSE, RF_RMSE],
     "R^2": [LR_R2, RF_R2]
 })
+st.session_state["model_results"] = model_results
 
 # summary of the data to give the Gemini
 analysis_results = f"""
@@ -258,6 +263,74 @@ analysis_results = f"""
     Machine Learning Results:
     {model_results.to_string(index=False)}
 """
+
+# the function to make this report into a pdf
+def exportPDF():
+    PDFpath = report_dir / "student_performance_report.pdf"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    doc = SimpleDocTemplate(str(PDFpath), pagesize=letter)
+    styles = getSampleStyleSheet()
+    content = []
+    def heading(title):
+        content.append(Paragraph(title, styles["Heading2"]))
+        content.append(Spacer(1,10))
+
+    def paragraph(text):
+        content.append(Paragraph(str(text), styles["BodyText"]))
+        content.append(Spacer(1,8))
+    
+    def add_table(data):
+        content.append(Table(data, repeatRows=1))
+        content.append(Spacer(1,12))
+
+    # prepare the info for a pdf format
+    content.append(Paragraph("Student Performance and Study Habits", styles["Title"]))
+    heading("1. Dataset Overview")
+    paragraph(f"Dataset size: {df.shape[0]} students and {df.shape[1]} variables.")
+    paragraph("Dataset Source: Kaggle-Student Perfomance and Study Habits Dataset")
+    paragraph("Target Variable: 'final_exam_score'")
+
+    heading("2. Exploratory Analysis")
+    paragraph("Missing values were handled by replacing missing parental education values with MissingInfo and Potential outliers were retained")
+    add_table([["Variable", "Missing Before", "Missing After"]] + [[c, missing_before[c], missing_after[c]] for c in df.columns])
+    add_table([["Variable", "Outlier Count"]] + [[c, v["Count"]] for c, v in outliers_results.items()])
+
+    heading("3. Statistical Analysis & Hypothesis Testing")
+    paragraph("Alpha Level: 0.05")
+    for c in cColumns:
+        groups = [g["final_exam_score"].values for _, g in df.groupby(c)]
+        if len(groups) == 2:
+            stat, p = ttest_ind(*groups, equal_var=False)
+        else:
+            stat, p = f_oneway(*groups)
+        paragraph(f"{c}: Statistic = {stat:.4f}, P-value = {p:.4e}. {'Reject' if p < 0.05 else 'Fail to reject'} the null hypothesis")
+
+    heading("4. Machine Learning Results")
+    results = st.session_state.get("model_results")
+    if results is not None:
+        add_table([results.columns.tolist()] + results.round(4).values.tolist())
+    else:
+        paragraph("Vist the Machine Learning Results section to make the model results")
+
+    heading("5. Visualizations")
+    for file in sorted(figures_dir.glob("*.jpg")):
+        content.append(Paragraph(file.stem.replace("_", " ").title(), styles["Heading2"]))
+        content.append(Image(str(file), width=6*inch, height=4*inch, kind="proportional"))
+        content.append(Spacer(1, 10))
+
+    heading("6. Final Conclusion (quick version)")
+    paragraph("Study time and previous grade showed the strongest relationships with final exam scores among numeric variables."
+              "Internet access and part-time emploment showed significant differences among their categorical groups."
+              "Linear Regression performed better than Random Forest."
+              "These findings show associations, but not causation.")
+
+    heading("7. AI-Assisted Analysis")
+    paragraph(st.session_state.get("data_prep_response") or "Data preparation review not created")
+    paragraph(st.session_state.get("analysis_response") or "Statistical and machine learnign review not created")
+
+    doc.build(content)
+    return PDFpath
+    
 
 # sidebar navigation options
 navigation_options =[
@@ -379,7 +452,7 @@ elif section == "3. Statistical Analysis & Hypothesis Testing":
         st.write(f"**Alternate Hypothesis**: the mean exam scores are different between {group[0]} and {group[1]}")
         st.write("**Reasoning**: This is the most appropriate test when one is comparing the means of two different values.")
         st.write(f"Test Statistic: {results['Statistic']:.4f}")
-        st.write(f"P-value: {results['P_value']:.4e}")
+        st.write(f"P-value: {results['P-value']:.4e}")
         st.write(f"Result: {results['Result']}")
         
     # One-way ANOVA test
@@ -694,3 +767,14 @@ elif section == "7. AI-Assisted Analysis":
     if st.session_state.analysis_response is not None:
         st.subheader("Gemini's Response")
         st.markdown(st.session_state.analysis_response)
+
+# create the button to export report as pdf
+if st.sidebar.button("Create PDF Report"):
+    try:
+        PDFpath = exportPDF()
+        st.session_state["pdf_data"] = PDFpath.read_bytes()
+        st.sidebar.success("PDF created successfully")
+    except Exception as e:
+        st.sidebar.error(f"PDF creation failed: {e}")
+if "pdf_data" in st.session_state:
+    st.sidebar.download_button("Download PDF Report", data=st.session_state["pdf_data"], file_name="student_performance_report.pdf", mime="application/pdf")
