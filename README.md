@@ -16,4 +16,5 @@ Instructions for running the code:
 - OR download zip.
 - Open the project in VS Code.
 - install the needed dependencies.
+- go into the terminal and go to the directory where this project is downladed.
 - enter "Streamlit run src/app.py" in the terminal to run.

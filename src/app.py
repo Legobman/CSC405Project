@@ -330,7 +330,9 @@ def exportPDF():
 
     doc.build(content)
     return PDFpath
-    
+
+# add link to the github project
+st.write("Find my github project [HERE](https://github.com/Legobman/CSC405Project)")
 
 # sidebar navigation options
 navigation_options =[
