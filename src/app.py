@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import os
+import markdown
 from pathlib import Path
 from scipy.stats import pearsonr, spearmanr, ttest_ind, f_oneway
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -16,9 +17,10 @@ from sklearn.compose import ColumnTransformer
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from langchain_google_genai import ChatGoogleGenerativeAI
 from reportlab.lib.pagesizes import letter
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Image
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Image, ListFlowable, ListItem
 from reportlab.lib.units import inch
+from reportlab.lib import colors
 
 llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -278,6 +280,16 @@ def exportPDF():
     def paragraph(text):
         content.append(Paragraph(str(text), styles["BodyText"]))
         content.append(Spacer(1,8))
+
+    def add_markdown(text):
+        html = markdown.markdown(str(text), extension=["extra"])
+        elements = []
+        for element in html.split("</p>"):
+            element = element.strip()
+            if element:
+                elements.append(Paragraph(element + "</p>", styles["BodyText"]))
+                elements.append(Spacer(1, 6))
+        content.extend(elements)
     
     def add_table(data):
         content.append(Table(data, repeatRows=1))
@@ -325,8 +337,11 @@ def exportPDF():
               "These findings show associations, but not causation.")
 
     heading("7. AI-Assisted Analysis")
-    paragraph(st.session_state.get("data_prep_response") or "Data preparation review not created")
-    paragraph(st.session_state.get("analysis_response") or "Statistical and machine learnign review not created")
+    add_markdown(st.session_state.get("data_prep_response") or "Data preparation review not created")
+    add_markdown(st.session_state.get("analysis_response") or "Statistical and machine learnign review not created")
+
+    # link in pdf to github
+    content.append(Paragraph('Find my github project <link href="https://github.com/Legobman/CSC405Project" color="blue">HERE</link>', styles["BodyText"]))
 
     doc.build(content)
     return PDFpath
